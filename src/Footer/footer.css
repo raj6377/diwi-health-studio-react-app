@@ -1,0 +1,12 @@
+.footer{
+    padding: 4rem;
+    background-color: #142533;
+    color: white;
+    display: flex;
+    height: 60vh;
+    width: 100%;
+}
+
+.contact-us{
+    border: 2px solid red;
+}

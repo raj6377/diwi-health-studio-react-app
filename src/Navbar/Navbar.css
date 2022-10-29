@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav{
+    background-color: transparent;
+    color: rgb(5, 38, 57);
+    /* font-size: clamp(1,5vw,2rem); */
+    font:bold 1.2em "Fira Sans", serif;
+    /* font-size: 1.2rem; */
+    padding: 0rem 1rem;
+    margin-top: 0px;
+    max-width: 100vw;
+    position:fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    transition: .5s;
+    z-index: 5;
+}
+
+
+nav.nav-active-on-scroll{
+    background-color: white;
+    padding-top: .55%;
+    transition: .5s;
+    z-index: 5;
+}
+
+.logo{
+    position: relative;
+    width: 5%;
+}
+
+.nav ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav li{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0.82rem;
+}
+
+.nav a{
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav li.active{
+    border-bottom: .25rem solid rgb(80, 162, 240);
+}
+
+.nav li:hover{
+    border-radius: 20%;
+    background-color:rgb(161, 208, 255);
+    transition: 0.5s;
+}
+
+.nav .book-li{
+    background-color: rgb(80, 162, 240);
+    color: white;
+    border-radius: 15%;
+    border-color: rgb(161, 198, 233);
+}
+
+.nav li{
+    border-bottom: .25rem solid white;
+    transition: 0.5s;
+}
+
+/* Probably should not write this one here */
+.container{
+    display: flex;
+    justify-content: center;
+}
