@@ -45,6 +45,8 @@ body{
     display: grid;
 }
 .empty-div-after-title{
+    /* border: 2px solid red; */
+    background-color: rgba(0, 0, 0, 0.322);
     position:static;
     height: 85vh;
 }
@@ -141,50 +143,61 @@ body{
 }
 
 .testimonial-outer-div{
-    background-color: white;
+    background-color: aliceblue;
     height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid green;
+    /* border: 4px solid green; */
     /* overflow: hidden; */
 }
 
 .testimonial-inner-div{
     /* width: 100%; */
     padding: 0;
-    background-color: rgba(56, 135, 238, 0.651);
-    border: 2px solid rgb(255, 0, 242);
-    /* border-radius: 25%; */
+    background-color: white;
+    /* border: 2px solid rgba(59, 156, 173, 0.678); */
+    border-radius: 2% 25%;
+    /* overflow: hidden; */
     height: 50vh;
     width: 40%;
     /* display: grid; */
     /* grid-row-gap: 3px; */
-    
+    transition: all, 1s;
+    box-shadow: 1px 1px 2px 2px rgba(2, 19, 25, 0.25), 1px 1px 2px 2px aliceblue;
+}
+
+.testimonial-inner-div:hover{
+    box-shadow: 2px 2px 5px 5px rgba(5, 38, 57, 0.5), 2px 2px 5px 5px aliceblue;
+    transform:translateZ(10%);
+    transform:translateY(-5%);
+    transition: all, 1.3s;
+    cursor: pointer;
 }
 
 .testimonial-upper{
     
     display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    border: 2px solid rgb(2, 0, 116);
+    padding: 1.5rem;
+    /* border: 2px solid rgb(2, 0, 116); */
     height: max-content;
 }
 
 .testimonial-upper h2{
     margin-top: 5%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: max-content;
+    margin: auto;
 }
 
 .testimonial-pic{
+    margin-left: 5rem;
     height: 5rem;
     width: 5rem;
     overflow: hidden;
     /* object-fit: fill; */
-    border: 2px solid black;
+    border: 2px solid aliceblue;
     border-radius: 100%;
 }
 
@@ -195,5 +208,14 @@ body{
 }
 
 .testimonial-lower{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
+    
+    /* overflow: ellipsis; */
+    overflow: auto;
+}
+
+.testimonial-lower p{
+    padding: 0 2.4rem;
+    text-align: justify;
+    font-size: 1.25rem;
 }

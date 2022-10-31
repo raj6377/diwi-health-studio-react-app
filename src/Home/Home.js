@@ -6,8 +6,20 @@ import general from '../Images/1.jpg'
 import cosmetic from '../Images/2.jpg'
 import surgical from '../Images/3.jpg'
 
+
 export default function Home() {
   
+  var testimonial = `It is new in the locality. Visited recently , got teeth scaling and polishing done.
+  It was quite a refreshing experience . Doctor was taking all the safety measures and was good communicator.
+  Had zero sensitivity after the treatment which is not common after scaling .
+  It also had some pretty advanced machines with Led and stuff don't know much about it , lol ....
+  but as far as I was concerned about scaling , it went great . Would recommend visiting ....`;
+
+  if(testimonial.length>390){
+    testimonial = testimonial.substring(0,390)
+    testimonial += "......"
+  } 
+
   return (
     <>
   
@@ -78,11 +90,11 @@ export default function Home() {
             <div className='testimonial-pic'>
               <img src='https://picsum.photos/100/100' />
             </div>
-            <h2> wtf is happening here</h2>
+            <h2> Abhishekh </h2>
           </div>
 
           <div className='testimonial-lower'>
-            <h5> wtf is happening here</h5>
+            <p>{testimonial}</p>
           </div>
 
         </div>
