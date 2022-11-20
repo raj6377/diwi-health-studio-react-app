@@ -64,10 +64,10 @@ export default function Book() {
 
                 <form className='main-form'>
                   <div className='form-column-div'>
-                    <input type='text' placeholder='Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>
+                    <input type='text' placeholder='  Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>
                   </div>
                   <div className='form-column-div'>
-                    <input type='number' placeholder='Age' className='input-tag' min='1' max='99' onChange={(event) => setAge(event.target.value)} required/>
+                    <input type='number' placeholder='  Age' className='input-tag' min='1' max='99' onChange={(event) => setAge(event.target.value)} required/>
                   </div>
                   <div className='form-column-div'>
                     <select name="gender" className='input-tag' onChange={(event) => setGender(event.target.value)}>

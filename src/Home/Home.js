@@ -39,8 +39,9 @@ export default function Home() {
       <div className="empty-div-after-title"/>
 
       <div className='services-brief'>
+        <div className='services-tag-line'>Comprehensive care, one convenient location</div>
 
-        <div>
+        <div className='service-card'>
           <img src={general} alt="general-checkup"/>
           <br/>
           <br/>
@@ -48,7 +49,7 @@ export default function Home() {
           <br/>
           <p>Everything you expect and then some. Cleanings, fillings, and x-rays are just the beginning.</p>
         </div>
-        <div>
+        <div className='service-card'>
           <img src={cosmetic} alt="cosmetic-treatment"/>
           <br/>
           <br/>
@@ -56,7 +57,7 @@ export default function Home() {
           <br/>
           <p>Discover your “wow!” factor. Invisalign, veneers, and in-office or take-home teeth whitening.</p>
         </div>
-        <div>
+        <div className='service-card'>
           <img src={surgical} alt="surgical-treatment"/>
           <br/>
           <br/>
