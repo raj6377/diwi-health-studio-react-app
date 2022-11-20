@@ -1,6 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "@firebase/firestore"
-
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import { getAuth } from "firebase/auth";
 // const firebaseConfig = {
 //     apiKey: "AIzaSyCK3nag5DHrcHOfYTCh09e1xu6iS8_P70o",
 //     authDomain: "diwi-health-studio.firebaseapp.com",
@@ -11,16 +11,17 @@ import { getFirestore } from "@firebase/firestore"
 //     measurementId: "G-LN8ZSKSRJB"
 //   };
 
-  const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_CONFIG,
-    authDomain: process.env.REACT_APP_MESSAGING_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_MESSAGING_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_MESSAGING_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_API_ID,
-    measurementId: process.env.REACT_APP_MESSAGING_MEASUREMENT_ID
-  };
+  const firebaseApp = firebase.initializeApp({
+    apiKey: "AIzaSyAu9bRbm4l-f_y5LV8k8Q9_RakkTkwO16k",
+    authDomain: "diwi-health-studio-e4fcf.firebaseapp.com",
+    projectId: "diwi-health-studio-e4fcf",
+    storageBucket: "diwi-health-studio-e4fcf.appspot.com",
+    messagingSenderId: "442881559855",
+    appId: "1:442881559855:web:ae8441d8f6f9f0c3ed25da",
+    measurementId: "G-E0FRR6HCEH"
+  });
 
-  const app = initializeApp(firebaseConfig);
+ const db = firebaseApp.firestore();
 
-  export const db = getFirestore(app);
+ export {db};
+ export const auth=getAuth();

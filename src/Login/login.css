@@ -1,0 +1,34 @@
+.login{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login input{
+    width:300px;
+    height:40px;
+    margin:15px;
+}
+.login button{
+    width:300px;
+    height:40px;
+    margin:15px;
+    border-style: none;
+    background-color: mediumturquoise;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.login span{
+    font-size: 15px;
+    color:red;
+}
+
+.login img{
+    margin:15px;
+}

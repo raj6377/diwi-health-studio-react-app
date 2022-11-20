@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import { Route, Routes } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Book from './Book/Book'
+import Login from './Login/Login';
 
 function App() {
   // let Component
@@ -33,6 +34,7 @@ function App() {
           <Route path='/Services' element={<Services/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
+          <Route path='/Login' element={<Login/>}/>
         </Routes>
       </div>
     <Footer />
