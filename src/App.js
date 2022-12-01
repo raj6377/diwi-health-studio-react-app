@@ -5,7 +5,8 @@ import Home from './Home/Home';
 import { Route, Routes } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Book from './Book/Book'
-import Login from './Login/Login';
+import Blog from './Blog/Blog'
+import Login from './Login/Login'
 
 function App() {
   // let Component
@@ -32,6 +33,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/Services' element={<Services/>}/>
+          <Route path='/Blog' element={<Blog/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
           <Route path='/Login' element={<Login/>}/>

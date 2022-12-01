@@ -26,6 +26,7 @@ export default function Navbar() {
         <ul>
             <CustomLink to='/'>Home</CustomLink>
             <CustomLink to='/Services'>Services</CustomLink>
+            <CustomLink to='/Blog'>Blogs</CustomLink>
             <CustomLink to='/About'>About</CustomLink>
             <CustomLink to='/Book' className='book' >Book Appointment</CustomLink>
         </ul>
