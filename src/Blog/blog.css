@@ -9,7 +9,7 @@ body{
     background-color: rgb(29, 133, 165);
     background-color: #3b413dc5;
     background-image: radial-gradient(
-        #3b413d25 6px,
+        #326594f5 6px,
         transparent 6px,
         white 6px
     );
@@ -41,7 +41,7 @@ body{
 
 
 .blog-cards{
-    background-color: #326594f5;
+    background-color: #326594;
     /* background-image: radial-gradient(
         white 6px,
         transparent 6px
