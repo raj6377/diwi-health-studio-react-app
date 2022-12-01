@@ -30,9 +30,9 @@ const Login = () =>{
  return (
         <div className='login'>
             <form onSubmit={handleSubmit}>
-            <img src={require('../Images/logo1.png')}/>
-                <input type='email' placeholder='email' onChange={(e)=>setEmail(e.target.value)}></input>
-                <input type='password' placeholder='password' onChange={(e)=>setPassword(e.target.value)}></input>
+            <img src={require('../Images/navbar/logo1.png')}/>
+                <input type='email' placeholder=' email' onChange={(e)=>setEmail(e.target.value)}></input>
+                <input type='password' placeholder=' password' onChange={(e)=>setPassword(e.target.value)}></input>
                 <button type='submit'>Login</button>
                 {error && <span>Wrong username or password!</span>}
             </form>
