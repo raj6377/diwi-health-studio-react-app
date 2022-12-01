@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../Images/logo1.png'
+import logo from '../Images/navbar/logo1.png'
 import { Link } from 'react-router-dom'
 import { useMatch, useResolvedPath} from 'react-router-dom'
 import { useState } from 'react'

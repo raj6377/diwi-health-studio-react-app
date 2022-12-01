@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import locImg from '../Images/location.png'
+import locImg from '../Images/footer/location.png'
 
 
 export default function Footer() {

@@ -1,10 +1,10 @@
 import React from 'react'
 import './home.css'
 import vid from './vid.mp4'
-import pic1 from '../Images/tools1.jpg'
-import general from '../Images/1.jpg'
-import cosmetic from '../Images/2.jpg'
-import surgical from '../Images/3.jpg'
+import pic1 from '../Images/home/tools1.jpg'
+import general from '../Images/home/1.jpg'
+import cosmetic from '../Images/home/2.jpg'
+import surgical from '../Images/home/3.jpg'
 
 
 export default function Home() {
