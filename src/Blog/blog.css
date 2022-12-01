@@ -9,8 +9,9 @@ body{
     background-color: rgb(29, 133, 165);
     background-color: #3b413dc5;
     background-image: radial-gradient(
-        #326594f5 6px,
-        transparent 6px,
+        #326594f5 1px,
+        #3b413dc5 10px,
+        transparent 10px,
         white 6px
     );
     background-size: 430px 1px;
@@ -53,6 +54,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     /* border: 2px solid greenyellow; */
+    box-shadow: 0 5px 15px 0 rgb(0, 0, 0);
+    border-radius: 5%;
+    border:2px solid#3b413d;
 }
 
 .blog-cards div{
