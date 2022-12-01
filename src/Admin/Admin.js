@@ -24,7 +24,7 @@ const colRef= collection(db,'Appointment');
             <tr> 
                         <td>Address</td>
                         <td>Age</td>
-                        <td>DateRequested</td>
+                        <td>dateRequested</td>
                         <td>Gender</td>
                         <td>Mail</td>
                         <td>Mobile</td>
