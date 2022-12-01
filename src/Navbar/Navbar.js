@@ -28,6 +28,7 @@ export default function Navbar() {
             <CustomLink to='/Services'>Services</CustomLink>
             <CustomLink to='/Blog'>Blogs</CustomLink>
             <CustomLink to='/About'>About</CustomLink>
+            <CustomLink to='/Login'>Admin</CustomLink>
             <CustomLink to='/Book' className='book' >Book Appointment</CustomLink>
         </ul>
     </nav>
