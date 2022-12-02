@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Book from './Book/Book'
 import Blog from './Blog/Blog'
-import Login from './Login/Login'
+// import Login from './Login/Login'
 import Admin from './Admin/Admin';
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
           <Route path='/Blog' element={<Blog/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
-          <Route path='/Login' element={<Login/>}/>
+          {/* <Route path='/Login' element={<Login/>}/> */}
           <Route path='/Admin' element={<Admin/>}/>
         </Routes>
       </div>
