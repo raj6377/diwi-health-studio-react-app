@@ -1,12 +1,18 @@
 
 .bg{
     position: absolute;
-    /* height: 100vh; */
     width: 100%;
-    /* height: vh; */
+    height: 80vh;
     object-fit:fill;
     z-index: -1;
-    /* border: 2px solid red; */
+    overflow: hidden;
+}
+
+.bg img{
+    position: absolute;
+    width: 99vw;
+    height: 80vh;
+    object-fit:cover;
 }
 
 .outer1{

@@ -1,3 +1,4 @@
+ @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -9,7 +10,8 @@ body{
 
 .nav{
     background-color: transparent;
-    color: rgb(5, 38, 57);
+    /* color: rgb(5, 38, 57); */
+    color: white;
     /* font-size: clamp(1,5vw,2rem); */
     font:bold 1.2em "Fira Sans", serif;
     /* font-size: 1.2rem; */
@@ -30,6 +32,7 @@ body{
 
 nav.nav-active-on-scroll{
     background-color: white;
+    color: rgb(5, 38, 57);
     padding-top: .55%;
     transition: .5s;
     z-index: 5;
@@ -41,6 +44,7 @@ nav.nav-active-on-scroll{
 }
 
 .nav ul{
+    font-family: "Jost", sans-serif;
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -64,6 +68,7 @@ nav.nav-active-on-scroll{
 
 .nav li.active{
     border-bottom: .25rem solid rgb(80, 162, 240);
+    color: rgb(49, 98, 143);
 }
 
 .nav li:hover{

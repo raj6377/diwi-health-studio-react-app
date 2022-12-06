@@ -1,6 +1,6 @@
 import React from 'react'
 import './blog.css'
-import bgImg from '../Images/Blog/bg.jpg'
+import bgImg from '../Images/Blog/bgx.jpg'
 
 export default function Blog() {
     return (

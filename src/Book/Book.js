@@ -36,9 +36,10 @@ export default function Book() {
     // #document has its nodes
     // window.location.href="/";
   }
-
+  
   return (
     <>
+    <div className='bg'><img src={bgImg}  /></div>
     <div className='outer1'>
 
       <div className="outer-rad">
@@ -107,7 +108,7 @@ export default function Book() {
 
           </div>
     </div>
-        <img src={bgImg} className='bg' /> 
+         
 
     </>
   )

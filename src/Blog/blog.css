@@ -18,7 +18,9 @@ body{
 }
 
 .bg-img img{
-    background-blend-mode:multiply;
+    width: 98.5vw;
+    height: 80vh;
+    filter: brightness(80%);
     object-fit:cover;
 }
 
