@@ -12,7 +12,7 @@
     align-items: center;
     width: 98.5vw;
     height: max-content;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .emp-div-nav{
@@ -27,6 +27,7 @@
     height:max-content;
     margin: 10rem 0;
     box-shadow: 0 2px 10px 0 rgb(0, 0, 0);
+    border-bottom: 4px solid #008678;
     /* border: 2px solid green; */
 }
 
@@ -48,6 +49,7 @@
 }
 
 .table-content{
+    border-top: 25px;
     width: max-content;
     height: max-content;
     border-collapse: collapse;
