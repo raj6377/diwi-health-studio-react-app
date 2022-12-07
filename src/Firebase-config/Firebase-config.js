@@ -13,7 +13,7 @@ import { getAuth } from 'firebase/auth'
 //     measurementId: "G-LN8ZSKSRJB"
 //   };
 
-const firebaseApp = {
+const firebaseApp =firebase.initializeApp({
   apiKey: "AIzaSyDPV_WB3_KzsKPhJX9D8AtaT9YBRFzdWMs",
   authDomain: "diwi-health-studio-370306.firebaseapp.com",
   projectId: "diwi-health-studio-370306",
@@ -21,7 +21,7 @@ const firebaseApp = {
   messagingSenderId: "255046250570",
   appId: "1:255046250570:web:e89138593938362ee4f6b3",
   measurementId: "G-BMGFY25V7F"
-};
+});
 
   const db = firebaseApp.firestore();
   export{db};
