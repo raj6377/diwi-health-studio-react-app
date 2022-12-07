@@ -4,9 +4,12 @@ import { db } from '../Firebase-config/Firebase-config';
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
-const Admin = () => {
+const Admin = (props) => {
     const [data, setData] = useState([]);
-
+    
+    useEffect(()=>{
+        props.setNavShow(false)
+    },[props.setNavShow])
 
     useEffect(() => {
         db.collection('Appointment').onSnapshot((snapshot) => {
