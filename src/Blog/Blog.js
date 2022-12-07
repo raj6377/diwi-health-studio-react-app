@@ -4,11 +4,11 @@ import bgImg from '../Images/Blog/bgx.jpg'
 
 export default function Blog() {
     return (
-    <div class="main-blog-div">
+    <div className="main-blog-div">
         <div className='bg-img'>
             <img className='bg-img' src={bgImg}/>
         </div>
-        <h2 className='blog-head'contentEditable='true' >Blogs</h2>
+        <h2 className='blog-head' >Blogs</h2>
 
         <div className='next-div'/>
 
