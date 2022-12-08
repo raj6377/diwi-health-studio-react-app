@@ -55,6 +55,9 @@ body{
 .blog-cards div{
     background-color: white;
     width: 250px;
+    height: 350px;
+    max-height:350px;
+    overflow: hidden;
     padding: 50px;
     /* max-width: 200px; */
     display: grid;
@@ -68,6 +71,8 @@ body{
 }
 
 .blog-cards img{
+    width: 200px;
+    height: 200px;
     border-radius: 5%;
 }
 

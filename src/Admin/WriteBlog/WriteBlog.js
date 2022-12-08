@@ -5,7 +5,7 @@ import { storage } from '../../Firebase-config/Firebase-config';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import {getDownloadURL, ref, uploadBytesResumable} from 'firebase/storage';
 import {useNavigate} from 'react-router-dom'
-import bg from '../../Images/write-blog/bgx.jpg'
+import bg from '../../Images/write-blog/bgx1.jpg'
  
 const WriteBlog = (props) => {
   
