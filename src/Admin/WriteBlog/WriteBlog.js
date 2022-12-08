@@ -5,6 +5,7 @@ import { storage } from '../../Firebase-config/Firebase-config';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import {getDownloadURL, ref, uploadBytesResumable} from 'firebase/storage';
 import {useNavigate} from 'react-router-dom'
+import bg from '../../Images/write-blog/bgx.jpg'
  
 const WriteBlog = (props) => {
   
@@ -80,17 +81,20 @@ const handleSubmit = async (e) => {
         <div className='write-blog-outer-div'>
           <div className='write-blog-inner-div'>
             <form onSubmit={handleSubmit} className='write-blog-form'>
-                     <div >
-                        <input label='Title' type="text" name='Title' placeholder='Title' onChange={handleChange} value={Title} autofocus />
+                     <div className='wb-one-ele'>
+                        <input type="text" name='Title' placeholder=' Title' onChange={handleChange} value={Title} autofocus />
                     </div>
-                    <div >
-                        <textarea label='Text' className='txt' name='Text' onChange={handleChange} value={Text}  rows="20" cols="100" />
+                    <div className='wb-one-ele'>
+                        <textarea placeholder=' Context' className='wb-context' name='Text' onChange={handleChange} value={Text}  rows="20" cols="100" />
                      </div>
         
-                     <div >
-                        <input Label='upload'type='file' onChange={(e)=>{setFile(e.target.files[0])}}/>
-                        <button primary type='submit' disabled={progress !==null && progress < 100} className='bttn'>SUBMIT</button>
+                     <div className='wb-one-ele'>
+                        <input type='file' onChange={(e)=>{setFile(e.target.files[0])}}/>
                      </div>
+                     <div className='wb-one-ele'>
+                        <button primary type='submit' disabled={progress !==null && progress < 100} className='wb-post-btn'>Post</button>
+                     </div>
+
             </form>
           </div>
         </div>
