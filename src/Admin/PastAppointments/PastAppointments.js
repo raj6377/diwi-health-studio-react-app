@@ -40,7 +40,7 @@ export default function PastAppointments( props ) {
 
   return (
     <div><div className="table-outer-container">
-    <div className='emp-div-nav'></div>
+    <div className='emp-div-nav'><h1>Appointments</h1></div>
     <div className="table-inner-container1">
         <div className="table-inner-container2">
             <div className="table-heading">

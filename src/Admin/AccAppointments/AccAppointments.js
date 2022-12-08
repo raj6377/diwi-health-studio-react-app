@@ -72,7 +72,7 @@ export default function AccAppointments( props ) {
 
   return (
     <div><div className="table-outer-container">
-    <div className='emp-div-nav'></div>
+    <div className='emp-div-nav'> <h1>Appointments</h1> </div>
     <div className="table-inner-container1">
         <div className="table-inner-container2">
             <div className="table-heading">
@@ -130,11 +130,11 @@ export default function AccAppointments( props ) {
                                     <a >
                                         <i onClick={() => onDelete(item.id)} className="fas fa-trash-alt fa-lg delete-btn" />
                                     </a>
-                                    <Link to='/PastAppointments'>
-                                        <a >
-                                            <i onClick={() => pushToPastAppointments(item.id)} className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
-                                        </a>
-                                    </Link>
+                                    
+                                    <a >
+                                        <i onClick={() => pushToPastAppointments(item.id)} className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
+                                    </a>
+                                    
 
                                 </td>
                             </tr>

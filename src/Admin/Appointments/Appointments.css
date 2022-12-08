@@ -16,10 +16,17 @@
 }
 
 .emp-div-nav{
-    width: 100%;
+    font-family: "Jost", sans-serif;
+    font-size: 1.05rem;
+    font-variant: small-caps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100vw;
     height: 15vh;
-    border: 2px solid blue;
-    background-color: #326494;
+    /* border: 2px solid blue; */
+    background-color: #008678;
 }
 
 .table-inner-container1{
@@ -70,7 +77,7 @@
 
 th,td{
     text-align: center;
-    padding: 15px;
+    padding: 17px;
     max-width: 11vw;
     /* inline-size: 4vw; */
 }
@@ -97,6 +104,7 @@ td{
 
 .tick-btn{
     color: rgb(34, 228, 34);
+    cursor: pointer;
 }
 
 .even-row{
@@ -200,9 +208,23 @@ td{
 .AppNav-outer{
     text-decoration: none;
     display: flex;
-    justify-content: center;
+    color: black;
+    /* border: 10px solid black; */
+    width: 70vw;
+    min-width: max-content ;
+    justify-content:space-between;
     align-items: center;
     gap: 15px;
     
 }
 
+
+.app-nav-active{
+    background-color: #008678;
+    outline: 10px solid #008678;
+    color: #FFFFFF;
+}
+
+.app-nav-inactive{
+    color: #008678;
+}
