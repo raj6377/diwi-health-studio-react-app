@@ -19,7 +19,7 @@ export default function Admin(props) {
                         <Link><h1 className='logIn-btn' >Past Appointments</h1></Link>
                     </div>
                     <div className='all-blogs'>
-                        <Link to='/Blog'><h1 className='logIn-btn' >Write Blogs</h1></Link>
+                        <Link to='/WriteBlog'><h1 className='logIn-btn' >Write Blogs</h1></Link>
                         <Link to='/Blog'><h1 className='logIn-btn' >View Blogs</h1></Link>
                     </div>
                 </div>

@@ -3,15 +3,15 @@ import 'firebase/compat/firestore'
 import { getAuth } from 'firebase/auth'
 
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCK3nag5DHrcHOfYTCh09e1xu6iS8_P70o",
-//     authDomain: "diwi-health-studio.firebaseapp.com",
-//     projectId: "diwi-health-studio",
-//     storageBucket: "diwi-health-studio.appspot.com",
-//     messagingSenderId: "89321223298",
-//     appId: "1:89321223298:web:45f9df7c70f09aa486309b",
-//     measurementId: "G-LN8ZSKSRJB"
-//   };
+//  const firebaseApp = firebase.initializeApp({
+//   apiKey: "AIzaSyAXnDL79fcW76RYpwYQcvvMDI6S4WRa5Gc",
+//   authDomain: "test-5d5e4.firebaseapp.com",
+//   projectId: "test-5d5e4",
+//   storageBucket: "test-5d5e4.appspot.com",
+//   messagingSenderId: "495857734613",
+//   appId: "1:495857734613:web:1368d6d75ce99afc12e35c",
+//   measurementId: "G-1H02RB1YHF"
+//   });
 
 const firebaseApp =firebase.initializeApp({
   apiKey: "AIzaSyDPV_WB3_KzsKPhJX9D8AtaT9YBRFzdWMs",

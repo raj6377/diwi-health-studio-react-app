@@ -10,6 +10,7 @@ import Login from './Login/Login'
 import Appointments from './Appointments/Appointments';
 import Admin from './Admin/Dashboard/Dashboard'
 import Edit from './Edit/Edit';
+import WriteBlog from './WriteBlog/WriteBlog';
 
 import { useState } from 'react'
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/Admin' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/Appointments' element={<Appointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
+          <Route path='/WriteBlog' element={<WriteBlog/>}/>
 
         </Routes>
       </div>
