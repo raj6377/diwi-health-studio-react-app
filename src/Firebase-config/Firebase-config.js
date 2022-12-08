@@ -1,6 +1,6 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore'
-import { getAuth } from 'firebase/auth'
+import "firebase/compat/storage";
 
 
 //  const firebaseApp = firebase.initializeApp({
@@ -13,7 +13,7 @@ import { getAuth } from 'firebase/auth'
 //   measurementId: "G-1H02RB1YHF"
 //   });
 
-const firebaseApp =firebase.initializeApp({
+const firebaseConfig ={
   apiKey: "AIzaSyDPV_WB3_KzsKPhJX9D8AtaT9YBRFzdWMs",
   authDomain: "diwi-health-studio-370306.firebaseapp.com",
   projectId: "diwi-health-studio-370306",
@@ -21,9 +21,10 @@ const firebaseApp =firebase.initializeApp({
   messagingSenderId: "255046250570",
   appId: "1:255046250570:web:e89138593938362ee4f6b3",
   measurementId: "G-BMGFY25V7F"
-});
-
-  const db = firebaseApp.firestore();
+};
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const storage = firebase.storage();
   export{db};
-  export const auth = getAuth();
+  export {storage};
   
