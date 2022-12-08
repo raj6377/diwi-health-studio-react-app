@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './WriteBlog.css'
-import { db } from '../Firebase-config/Firebase-config';
+import { db } from '../../Firebase-config/Firebase-config';
 import { addDoc, collection } from 'firebase/firestore'
 import {useNavigate} from 'react-router-dom'
 

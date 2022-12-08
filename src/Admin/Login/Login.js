@@ -5,7 +5,7 @@ import {signInWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
 // import { AuthContext } from '../context/AuthContext';
 
-import  log  from '../Images/navbar/logo1.png'
+import  log  from '../../Images/navbar/logo1.png'
 
 const Login = (props) =>{
 

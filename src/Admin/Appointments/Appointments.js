@@ -1,6 +1,6 @@
 import react, { useState, useEffect } from 'react';
 import './Appointments.css'
-import { db } from '../Firebase-config/Firebase-config';
+import { db } from '../../Firebase-config/Firebase-config';
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 

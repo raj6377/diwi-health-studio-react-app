@@ -6,11 +6,11 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Book from './Book/Book'
 import Blog from './Blog/Blog'
-import Login from './Login/Login'
-import Appointments from './Appointments/Appointments';
+import Login from './Admin/Login/Login'
+import Appointments from './Admin/Appointments/Appointments';
 import Admin from './Admin/Dashboard/Dashboard'
-import Edit from './Edit/Edit';
-import WriteBlog from './WriteBlog/WriteBlog';
+import Edit from './Admin/Reschedule/Reschedule';
+import WriteBlog from './Admin/WriteBlog/WriteBlog';
 
 import { useState } from 'react'
 
@@ -29,7 +29,7 @@ function App() {
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
           <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>
-          <Route path='/Admin' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/Dashboard' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/Appointments' element={<Appointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
           <Route path='/WriteBlog' element={<WriteBlog/>}/>

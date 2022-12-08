@@ -1,4 +1,4 @@
-import { db } from "../Firebase-config/Firebase-config"
+import { db } from "../../Firebase-config/Firebase-config"
 import { useState, useEffect} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { isEmpty } from 'lodash'
