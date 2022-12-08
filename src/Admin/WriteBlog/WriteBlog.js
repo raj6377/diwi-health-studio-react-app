@@ -6,7 +6,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import {getDownloadURL, ref, uploadBytesResumable} from 'firebase/storage';
 import {useNavigate} from 'react-router-dom'
  
-const WriteBlog = () => {
+const WriteBlog = (props) => {
   
   const initialState={
     Title:'',
@@ -70,8 +70,13 @@ const handleSubmit = async (e) => {
   navigate('/Blog');
 }
 
+  useEffect(()=>{
+    props.setNavShow(false)
+},[props.setNavShow])
 
   return (
+      <>
+        <img className='write-blog-bg' src={bg}></img>
         <div className='write-blog-outer-div'>
           <div className='write-blog-inner-div'>
             <form onSubmit={handleSubmit} className='write-blog-form'>
@@ -89,6 +94,7 @@ const handleSubmit = async (e) => {
             </form>
           </div>
         </div>
+      </>
     )
 }
 export default WriteBlog;
