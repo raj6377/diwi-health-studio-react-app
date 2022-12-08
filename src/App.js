@@ -8,7 +8,7 @@ import Book from './Book/Book'
 import Blog from './Blog/Blog'
 import Login from './Login/Login'
 import Appointments from './Appointments/Appointments';
-import Admin from './Admin/Admin'
+import Admin from './Admin/Dashboard/Dashboard'
 import Edit from './Edit/Edit';
 
 import { useState } from 'react'

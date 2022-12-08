@@ -1,9 +1,8 @@
 import React,{ useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import './Admin.css'
-export default function Admin(props) {
+import './Dashboard.css'
 
-    const [data, setData] = useState([]);
+export default function Admin(props) {
     
     useEffect(()=>{
         props.setNavShow(false)
