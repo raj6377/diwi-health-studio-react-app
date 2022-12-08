@@ -99,7 +99,7 @@ export default function AccAppointments( props ) {
                                     <a onClick={() => onDelete(item.id)}>
                                         <i className="fas fa-trash-alt fa-lg delete-btn" />
                                     </a>
-                                    <Link to='/PastAppointments'>
+                                    <Link to='/PastAppointment'>
                                         <a onClick={() => pushToAccAppointments(item.id)}>
                                             <i className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
                                         </a>

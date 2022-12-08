@@ -30,7 +30,7 @@ const Admin = (props) => {
         }
     };
 
-    const AccAppointmnetCollectionRef = collection(db,"AccAppointment");
+    const AccAppointmnetCollectionRef = collection(db,"AccAppointments");
 
     const pushToAccAppointments = async (id) => {
         await addDoc(AccAppointmnetCollectionRef,{id, Name, Age, Gender, Mobile, Mail, Address, Purpose, DateRequested, TimeRequested})

@@ -28,7 +28,7 @@ export default function PastAppointments( props ) {
 
     const onDelete = (id) => {
         if (window.confirm("Are you sure you want to delete?")) {
-            db.collection('AccAppointment').doc(id).delete();
+            db.collection('PastAppointment').doc(id).delete();
         }
     }
 
@@ -45,7 +45,7 @@ export default function PastAppointments( props ) {
     <div className="table-inner-container1">
         <div className="table-inner-container2">
             <div className="table-heading">
-                <h1>Accepted Appointments</h1>
+                <h1>Past Appointments</h1>
             </div>
 
             <table className="table-content">
