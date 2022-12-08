@@ -36,7 +36,7 @@ function App() {
           <Route path='/AccAppointments' element={<AccAppointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/PastAppointments' element={<PastAppointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
-          <Route path='/WriteBlog' element={<WriteBlog/>}/>
+          <Route path='/WriteBlog' element={<WriteBlog setNavShow={setShowNav} statusNavShow={showNav}/>}/>
 
         </Routes>
       </div>

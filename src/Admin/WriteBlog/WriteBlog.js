@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './WriteBlog.css'
 import { db } from '../../Firebase-config/Firebase-config';
 import { addDoc, collection } from 'firebase/firestore'
 import {useNavigate} from 'react-router-dom'
+import bg from '../../Images/write-blog/bgx.jpg'
 
 
-const WriteBlog = () => {
+const WriteBlog = (props) => {
   const [newTitle,setTitle] = useState("");
   const [newText,setText] = useState('');
   const [imageUpload,setImageUpload]=useState(null);
@@ -21,30 +22,34 @@ const WriteBlog = () => {
 
   }
 
+  useEffect(()=>{
+    props.setNavShow(false)
+},[props.setNavShow])
 
 
     return (
+      <>
+        <img className='write-blog-bg' src={bg}></img>
         <div className='write-blog-outer-div'>
           <div className='write-blog-inner-div'>
             <form className='write-blog-form'>
-                     <div >
-                        <label >Title</label>
-                        <input type="text" placeholder='Title' onChange={(event) => setTitle(event.target.value)}/>
+                    <div className='wb-one-ele' >
+                        <input type="text" placeholder=' Title' className='wb-title' onChange={(event) => setTitle(event.target.value)}/>
                     </div>
-                    <div >
-                        <label >Text</label>
-                        <textarea className='txt'  rows="20" cols="100" onChange={(event) => setText(event.target.value)}/>
-                     </div>
-                     <div className='new-blog-content'>
-                        <button className='bttn' onClick={createAppointment}>SUBMIT</button>
-                     </div>
-                     <div >
+                    <div className='wb-one-ele'>
+                        <textarea  placeholder=' Context' className='wb-context' rows="20" cols="100" onChange={(event) => setText(event.target.value)}/>
+                    </div>
+                    <div className='wb-one-ele'>
                         <input type='file' onChange={(e)=>{setImageUpload(e.target.files[0])}}/>
-                        <button className='bttn' onClick={uploadImage}>Upload Image</button>
-                     </div>
+                        {/* <button className='bttn' onClick={uploadImage}>Upload Image</button> */}
+                    </div>
+                    <div className='wb-one-ele'>
+                       <button className='wb-post-btn' onClick={createAppointment}>Post</button>
+                    </div>
             </form>
           </div>
         </div>
+      </>
     )
 }
 export default WriteBlog;

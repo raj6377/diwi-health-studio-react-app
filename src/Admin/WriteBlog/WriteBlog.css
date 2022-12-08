@@ -1,24 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
 
 .write-blog-outer-div{
     margin:10px;
     padding: 10px;
     display:flex;
     align-items: center;
+    object-fit:fill;
+    /* overflow: hidden; */
+}
+
+.write-blog-bg{
+    position: absolute;
+    width: 98.5vw;
+    /* height: 100vh; */
+    z-index: -2;
 }
 
 .write-blog-inner-div{
     margin-top: 20px;
     display:flex;
     padding: 25px;
+    background-color: #abcfcc77;
+    color: white;
 }
 
 .write-blog-form{
-
+    font-family: "Jost", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
     display: grid;
-    padding: 25px;
+    padding: 15px;
+    padding-bottom: 0;
     /* flex-direction: column; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
+
+.wb-one-ele{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    /* border: 2px solid green; */
+}
+
+.wb-title{
+    outline: none;
+    width: 50vw;
+    height: 5vh;
+}
+
+.wb-title:focus{
+    outline: 2px solid #00113f;
+}
+
+.wb-context{
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.wb-context:focus{
+    outline: 2px solid #00113f;
+}
+
+.wb-post-btn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+  }
+  
+  .wb-post-btn:hover,
+  .wb-post-btn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+  }
+  
+  .wb-post-btn:active {
+    opacity: .5;
+  }
 
 
 
