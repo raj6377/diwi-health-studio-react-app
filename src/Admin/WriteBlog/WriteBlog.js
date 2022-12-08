@@ -24,26 +24,26 @@ const WriteBlog = () => {
 
 
     return (
-        <div className='cntnr'>
-        <div className='bx'>
-            <form className='frm'>
-                     <div className="frm-grp">
-                        <label className='lbl'>Title</label>
+        <div className='write-blog-outer-div'>
+          <div className='write-blog-inner-div'>
+            <form className='write-blog-form'>
+                     <div >
+                        <label >Title</label>
                         <input type="text" placeholder='Title' onChange={(event) => setTitle(event.target.value)}/>
                     </div>
-                    <div className="frm-grp">
-                        <label className='lbl'>Text</label>
+                    <div >
+                        <label >Text</label>
                         <textarea className='txt'  rows="20" cols="100" onChange={(event) => setText(event.target.value)}/>
                      </div>
-                     <div className='frm-grp'>
+                     <div className='new-blog-content'>
                         <button className='bttn' onClick={createAppointment}>SUBMIT</button>
                      </div>
-                     <div className='frm-grp'>
+                     <div >
                         <input type='file' onChange={(e)=>{setImageUpload(e.target.files[0])}}/>
                         <button className='bttn' onClick={uploadImage}>Upload Image</button>
                      </div>
             </form>
-        </div>
+          </div>
         </div>
     )
 }
