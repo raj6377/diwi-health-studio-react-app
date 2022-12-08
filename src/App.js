@@ -7,7 +7,8 @@ import Footer from './Footer/Footer'
 import Book from './Book/Book'
 import Blog from './Blog/Blog'
 import Login from './Login/Login'
-import Admin from './Admin/Admin';
+import Appointments from './Appointments/Appointments';
+import Admin from './Admin/Admin'
 import Edit from './Edit/Edit';
 
 import { useState } from 'react'
@@ -28,6 +29,7 @@ function App() {
           <Route path='/Book' element={<Book/>}/>
           <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/Admin' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/Appointments' element={<Appointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
 
         </Routes>
