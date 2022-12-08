@@ -3,21 +3,29 @@ import './blog.css'
 import { db } from '../Firebase-config/Firebase-config';
 import bgImg from '../Images/Blog/bgx.jpg'
 import GoToTop from '../GoToTop';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 export default function Blog() {
-
-    const [data,setData]=useState([]);
-
+    const [users,setUsers] = useState([]);
+    const [loading,setLoading] = useState(false);
+    const navigate=useNavigate();
    
 useEffect(()=>{
-    db.collection('Blogs').onSnapshot((snapshot)=>{
-        const blog=[];
-        snapshot.forEach((doc)=>{
-            blog.push({...doc.data(),id:doc.id});
-        });       
-        setData(blog);
-        console.log(data);
-    })
+    setLoading(true);
+    const unsub=onSnapshot(collection(db,'Blogs'),(snapshot)=>{
+        let list = []
+        snapshot.docs.forEach((doc)=>{
+            list.push({id:doc.id,...doc.data()})
+        });
+        setUsers(list);
+        setLoading(false);
+    },(error)=>{
+        console.log(error);
+    });
+   return ()=>{
+    unsub();
+   };
 },[]);
 
     return (
@@ -30,10 +38,10 @@ useEffect(()=>{
         <div className='next-div'/>
 
         <div className='blog-cards'>
-            {data.map((item)=>{
+            {users && users.map((item)=>{
                 return(
                     <div>
-                    <img src='https://picsum.photos/200'/>
+                    <img src={item.img}/>
                     <h2>{item.Title}</h2>
                     </div>
                 )
