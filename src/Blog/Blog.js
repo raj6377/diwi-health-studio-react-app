@@ -33,7 +33,7 @@ useEffect(()=>{
                 return(
                     <div>
                     <img src='https://picsum.photos/200'/>
-                    {/* <h2>{item.}</h2> */}
+                    <h2>{item.Title}</h2>
                     </div>
                 )
             })}
