@@ -80,3 +80,10 @@
     width: 20vw;
     object-fit:cover;
 }
+
+.about-us-emp-div{
+    width: 98.5vw;
+    height: 10vh;
+    background-color:lightskyblue;
+    /* border: 2px solid black; */
+}

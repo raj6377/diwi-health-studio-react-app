@@ -1,9 +1,6 @@
 import './login.css'
-import { useContext, useState, useEffect } from 'react';
-import {signInWithEmailAndPassword} from 'firebase/auth'
-// import {auth} from '../Firebase-config/Firebase-config'
-import { useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../context/AuthContext';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import  log  from '../../Images/navbar/logo1.png'
 
@@ -25,7 +22,9 @@ const Login = (props) =>{
                         <input type='password' placeholder=' Password'></input>
                     </div>
                 <div className='logIn-buttons'>
+                <Link to='/Dashboard'>
                     <button className='logIn-btn'>Log In</button>
+                </Link>
                 </div>
                 </div>
             </div>
