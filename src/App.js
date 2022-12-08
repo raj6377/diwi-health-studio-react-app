@@ -9,6 +9,7 @@ import Blog from './Blog/Blog'
 // import Login from './Login/Login'
 import Admin from './Admin/Admin';
 import Edit from './Edit/Edit';
+import WriteBlog from './WriteBlog/WriteBlog';
 
 function App() {
   // let Component
@@ -41,6 +42,7 @@ function App() {
           {/* <Route path='/Login' element={<Login/>}/> */}
           <Route path='/Admin' element={<Admin/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
+          <Route path='/WriteBlog' element={<WriteBlog/>}/>
 
         </Routes>
       </div>
