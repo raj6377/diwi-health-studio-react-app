@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import './blog.css'
 import { db } from '../Firebase-config/Firebase-config';
 import bgImg from '../Images/Blog/bgx.jpg'
+import GoToTop from '../GoToTop';
 
 export default function Blog() {
 
@@ -41,6 +42,7 @@ useEffect(()=>{
         </div>
 
         <div className='next-div'/>
+    <GoToTop/>
     </div>
   )
 }

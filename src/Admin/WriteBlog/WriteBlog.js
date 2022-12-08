@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
           <div className='write-blog-inner-div'>
             <form onSubmit={handleSubmit} className='write-blog-form'>
                      <div className='wb-one-ele'>
-                        <input type="text" name='Title' placeholder=' Title' onChange={handleChange} value={Title} autofocus />
+                        <input className='wb-title' type="text" name='Title' placeholder=' Title' onChange={handleChange} value={Title} autofocus />
                     </div>
                     <div className='wb-one-ele'>
                         <textarea placeholder=' Context' className='wb-context' name='Text' onChange={handleChange} value={Text}  rows="20" cols="100" />

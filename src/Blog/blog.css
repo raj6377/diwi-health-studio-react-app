@@ -72,14 +72,14 @@ body{
 }
 
 .next-div{
-    height: 50vh;
-    background-color: rgb(29, 133, 165);
+    height: 25vh;
+    /* background-color: rgb(29, 133, 165);
     background-color: #3b413dc5;
     background-image: radial-gradient(
         #326594f5 1px,
         #3b413dc5 10px,
         transparent 10px,
         white 6px
-    );
+    ); */
     background-size: 430px 1px;
 }

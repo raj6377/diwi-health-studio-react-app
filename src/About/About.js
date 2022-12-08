@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import pic1 from '../Images/about/home-bg.jpg'
+import GoToTop from '../GoToTop'
 // import general from '../Images/4.jpg'
 // import cosmetic from '../Images/5.jpg'
 // import surgical from '../Images/6.jpg'
@@ -29,6 +30,7 @@ const About = ()=>{
     <img src={pic1} className="doc-pic" alt='doc-pic'/>
     
     </div>
+    <GoToTop/>
     </div>
   </>
    

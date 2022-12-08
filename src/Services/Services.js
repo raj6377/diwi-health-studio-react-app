@@ -3,6 +3,7 @@ import { services } from './api'
 import './Services.css'
 import Display from './Showcase'
 import bg from '../Images/services/bgx.jpg'
+import GoToTop from '../GoToTop'
 
 export default function Services() {
 
@@ -35,7 +36,7 @@ export default function Services() {
             }
 
       </div>
-
+    <GoToTop/>
     </div>
   )
 }
