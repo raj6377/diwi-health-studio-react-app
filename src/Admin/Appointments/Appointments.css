@@ -196,3 +196,13 @@ td{
 }
 
 
+/* **************** AppointmentNav ************************** */
+.AppNav-outer{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+

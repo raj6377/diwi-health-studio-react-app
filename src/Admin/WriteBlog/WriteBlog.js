@@ -6,8 +6,9 @@ import {useNavigate} from 'react-router-dom'
 
 
 const WriteBlog = () => {
-    const [newTitle,setTitle] = useState("");
+  const [newTitle,setTitle] = useState("");
   const [newText,setText] = useState('');
+  const [imageUpload,setImageUpload]=useState(null);
 
   const appointmnetCollectionRef = collection(db,"Blogs");
   const navigate=useNavigate();
@@ -15,6 +16,11 @@ const WriteBlog = () => {
   const createAppointment = async ()=>{
     await addDoc(appointmnetCollectionRef,{Title:newTitle , Text:newText })
   }
+  const uploadImage = () =>{
+    if(imageUpload==null) return;
+
+  }
+
 
 
     return (
@@ -31,6 +37,10 @@ const WriteBlog = () => {
                      </div>
                      <div className='frm-grp'>
                         <button className='bttn' onClick={createAppointment}>SUBMIT</button>
+                     </div>
+                     <div className='frm-grp'>
+                        <input type='file' onChange={(e)=>{setImageUpload(e.target.files[0])}}/>
+                        <button className='bttn' onClick={uploadImage}>Upload Image</button>
                      </div>
             </form>
         </div>

@@ -3,10 +3,24 @@ import './Appointments.css'
 import { db } from '../../Firebase-config/Firebase-config';
 import { collection, getDocs, orderBy, query,addDoc} from 'firebase/firestore';
 import { Link } from 'react-router-dom';
+import AppNav from '../AppointmentNav/AppointmentNav'
 
 const Admin = (props) => {
     const [data, setData] = useState([]);
-    const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
+    const [value,setValue] = useState(0)
+
+
+    // const {DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data[value] || {};
+    var Address = '';
+    var DateRequested = '';
+    var Age = '';
+    var Gender = '';
+    var Mail = '';
+    var Mobile = '';
+    var Name = '';
+    var Purpose = '';
+    var TimeRequested = '';
+    
     
     useEffect(()=>{
         props.setNavShow(false)
@@ -20,7 +34,7 @@ const Admin = (props) => {
             });
 
             setData(Appointments);
-            console.log(data);
+            // console.log(data);
         })
     }, []);
 
@@ -30,10 +44,31 @@ const Admin = (props) => {
         }
     };
 
-    const AccAppointmnetCollectionRef = collection(db,"AccAppointments");
+    const AccAppointmnetCollectionRef = collection(db,"AccAppointment");
 
     const pushToAccAppointments = async (id) => {
-        await addDoc(AccAppointmnetCollectionRef,{id, Name, Age, Gender, Mobile, Mail, Address, Purpose, DateRequested, TimeRequested})
+        
+        var ind = 0
+
+        data.forEach((block) => {
+            if(block.id===id){
+                Address=block.Address
+                Name = block.Name
+                Age = block.Age
+                Mail=block.Mail
+                Mobile = block.Mobile
+                Purpose = block.Purpose
+                TimeRequested = block.TimeRequested
+                DateRequested = block.DateRequested
+                Gender=block.Gender
+                ind = data.indexOf(block)
+            }
+        });        
+
+        db.collection('Appointment').doc(data[ind].id).delete();
+
+        await addDoc(AccAppointmnetCollectionRef,{Name:Name,Address:Address,Age:Age,Gender:Gender,Mail:Mail,Mobile:Mobile,Purpose:Purpose,TimeRequested:TimeRequested,DateRequested:DateRequested})
+       
     }
 
     return (
@@ -42,7 +77,7 @@ const Admin = (props) => {
             <div className="table-inner-container1">
                 <div className="table-inner-container2">
                     <div className="table-heading">
-                        <h1>Appointments</h1>
+                        <h1>{<AppNav/>}</h1>
                     </div>
 
                     <table className="table-content">
@@ -93,12 +128,12 @@ const Admin = (props) => {
                                                     <i className="fas fa-pencil-alt fa-lg update-btn" />
                                                 </a>
                                             </Link>
-                                            <a onClick={() => onDelete(item.id)}>
-                                                <i className="fas fa-trash-alt fa-lg delete-btn" />
+                                            <a >
+                                                <i onClick={() => onDelete(item.id)} className="fas fa-trash-alt fa-lg delete-btn" />
                                             </a>
-                                                <a onClick={() => pushToAccAppointments(item.id)}>
+                                                <a >
                                                     <Link to={`/AccAppointments`}>
-                                                    <i className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
+                                                    <i onClick={() => pushToAccAppointments(item.id)} className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
                                                     </Link>
                                                 </a>
                                         </td>

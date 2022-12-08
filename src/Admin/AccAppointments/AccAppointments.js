@@ -2,13 +2,22 @@ import React, { useState, useEffect} from 'react'
 import { db } from '../../Firebase-config/Firebase-config';
 import { Link } from 'react-router-dom';
 import { addDoc, collection } from 'firebase/firestore'
-
+import AppNav from '../AppointmentNav/AppointmentNav'
 
 export default function AccAppointments( props ) {
 
     const [data, setData] = useState([]);
 
-    const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
+    // const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
+    var Address = '';
+    var DateRequested = '';
+    var Age = '';
+    var Gender = '';
+    var Mail = '';
+    var Mobile = '';
+    var Name = '';
+    var Purpose = '';
+    var TimeRequested = '';
     
     useEffect(()=>{
         props.setNavShow(false)
@@ -32,10 +41,32 @@ export default function AccAppointments( props ) {
         }
     }
 
-    const PastAppointmnetCollectionRef = collection(db,"PastAppointment");
+    const PastAppointmentCollectionRef = collection(db,"PastAppointment");
 
-    const pushToAccAppointments = async (id) => {
-        await addDoc(PastAppointmnetCollectionRef ,{id, Name, Age, Gender, Mobile, Mail, Address, Purpose, DateRequested, TimeRequested})
+    const pushToPastAppointments = async (id) => {
+
+
+        var ind = 0
+
+        data.forEach((block) => {
+            if(block.id===id){
+                Address=block.Address
+                Name = block.Name
+                Age = block.Age
+                Mail=block.Mail
+                Mobile = block.Mobile
+                Purpose = block.Purpose
+                TimeRequested = block.TimeRequested
+                DateRequested = block.DateRequested
+                Gender=block.Gender
+                ind = data.indexOf(block)
+            }
+        });        
+
+        db.collection('AccAppointment').doc(data[ind].id).delete();
+
+        await addDoc(PastAppointmentCollectionRef,{Name:Name,Address:Address,Age:Age,Gender:Gender,Mail:Mail,Mobile:Mobile,Purpose:Purpose,TimeRequested:TimeRequested,DateRequested:DateRequested})
+       
     }
 
 
@@ -45,7 +76,7 @@ export default function AccAppointments( props ) {
     <div className="table-inner-container1">
         <div className="table-inner-container2">
             <div className="table-heading">
-                <h1>Accepted Appointments</h1>
+                <h1>{<AppNav/>}</h1>
             </div>
 
             <table className="table-content">
@@ -96,12 +127,12 @@ export default function AccAppointments( props ) {
                                             <i className="fas fa-pencil-alt fa-lg update-btn" />
                                         </a>
                                     </Link> */}
-                                    <a onClick={() => onDelete(item.id)}>
-                                        <i className="fas fa-trash-alt fa-lg delete-btn" />
+                                    <a >
+                                        <i onClick={() => onDelete(item.id)} className="fas fa-trash-alt fa-lg delete-btn" />
                                     </a>
-                                    <Link to='/PastAppointment'>
-                                        <a onClick={() => pushToAccAppointments(item.id)}>
-                                            <i className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
+                                    <Link to='/PastAppointments'>
+                                        <a >
+                                            <i onClick={() => pushToPastAppointments(item.id)} className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
                                         </a>
                                     </Link>
 

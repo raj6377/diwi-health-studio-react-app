@@ -1,14 +1,13 @@
 import React,{ useState, useEffect} from 'react'
 import { db } from '../../Firebase-config/Firebase-config';
-import { Link } from 'react-router-dom';
-import { addDoc, collection } from 'firebase/firestore'
+import AppNav from '../AppointmentNav/AppointmentNav'
 
 export default function PastAppointments( props ) {
 
 
   const [data, setData] = useState([]);
 
-    const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
+    // const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
     
     useEffect(()=>{
         props.setNavShow(false)
@@ -45,7 +44,7 @@ export default function PastAppointments( props ) {
     <div className="table-inner-container1">
         <div className="table-inner-container2">
             <div className="table-heading">
-                <h1>Past Appointments</h1>
+                <h1>{<AppNav/>}</h1>
             </div>
 
             <table className="table-content">
@@ -96,8 +95,8 @@ export default function PastAppointments( props ) {
                                             <i className="fas fa-pencil-alt fa-lg update-btn" />
                                         </a>
                                     </Link> */}
-                                    <a onClick={() => onDelete(item.id)}>
-                                        <i className="fas fa-trash-alt fa-lg delete-btn" />
+                                    <a >
+                                        <i onClick={() => onDelete(item.id)} className="fas fa-trash-alt fa-lg delete-btn" />
                                     </a>
                                     {/* <Link to='/AccAppointments'>
                                         <a onClick={() => pushToAccAppointments(item.id)}>

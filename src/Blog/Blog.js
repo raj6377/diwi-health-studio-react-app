@@ -34,7 +34,7 @@ useEffect(()=>{
                     <div>
                     <img src='https://picsum.photos/200'/>
                     {/* <h2>{item.}</h2> */}
-                </div>
+                    </div>
                 )
             })}
             
