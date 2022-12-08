@@ -6,32 +6,21 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Book from './Book/Book'
 import Blog from './Blog/Blog'
-// import Login from './Login/Login'
-import Admin from './Admin/Admin';
+import Login from './Login/Login'
+import Appointments from './Appointments/Appointments';
+import Admin from './Admin/Admin'
 import Edit from './Edit/Edit';
 import WriteBlog from './WriteBlog/WriteBlog';
 
-function App() {
-  // let Component
-  // switch (window.location.pathname) {
-  //   case ("/"):
-  //     Component = <Home/>
-  //     break;
-  //   case ("/Services"):
-  //     Component = <Services/>
-  //     break
-  //   case ("/About"):
-  //     Component = <About/>
-  //     break
-  //   default:
-  //     Component = <Home/>
-  //     break;
-  // }
+import { useState } from 'react'
 
+function App() {
+
+  const [showNav, setShowNav] = useState(true)
 
   return (
     <>
-      <Navbar/>
+      {showNav && <Navbar/>}
       <div className='container'>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -39,14 +28,15 @@ function App() {
           <Route path='/Blog' element={<Blog/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
-          {/* <Route path='/Login' element={<Login/>}/> */}
-          <Route path='/Admin' element={<Admin/>}/>
+          <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/Admin' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/Appointments' element={<Appointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
           <Route path='/WriteBlog' element={<WriteBlog/>}/>
 
         </Routes>
       </div>
-    <Footer />
+      {showNav && <Footer />}
     </>
   );
 }

@@ -87,7 +87,7 @@ const Edit=()=>{
                         <input type="text" className='form-control' value={address} name='address' onChange={handleInputChange}/>
                     </div> */}
                     <div className="operation-btns">
-                        <button className='cancel-button'>Cancel</button>
+                        <button className='cancel-btn'>Cancel</button>
                         <button type='submit' className='submit-btn'>Submit</button>
                     </div>
                 </form>

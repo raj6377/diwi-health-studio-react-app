@@ -1,34 +1,85 @@
-.login{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-}
-.login form{
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+.logIn-outer-div{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-.login input{
-    width:300px;
-    height:40px;
-    margin:15px;
-}
-.login button{
-    width:300px;
-    height:40px;
-    margin:15px;
-    border-style: none;
-    background-color: mediumturquoise;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-.login span{
-    font-size: 15px;
-    color:red;
+    width: 100vw;
+    height: 100vh;
+    /* border: 1px solid black; */
+    background-color: #60b0c4;
 }
 
-.login img{
-    margin:15px;
+.logIn-inner-div{
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    font-family: "Jost", sans-serif;
+    font-size: 1.25rem;
+    width: 50vw;
+    height:max-content;
+    border: 1px solid rgb(7, 169, 209);
+    border-radius: 7%;
+    box-shadow: 0 5px 25px 0 rgb(0, 0, 0);
 }
+
+.logIn-inner-div img{
+    padding-left: 70px;
+    margin-top: 40px;
+}
+
+.user-pass-field{
+    display: grid;
+}
+
+.user-pass-field input{
+    height: 30px;
+    font-size: 1.25rem;
+    color : #07a1c7;
+}
+
+.user-pass-field input:focus{
+    outline: none;
+    border: 2px solid #07a1c7;
+}
+
+
+.logIn-btn {
+    margin-bottom: 40px;
+    margin-left: 75px;
+    background: #0d9ac5;
+    border: 1px solid #0a88af;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+  }
+  
+  .logIn-btn:hover,
+  .logIn-btn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #0b76a0;
+  }
+  
+  .logIn-btn:active {
+    opacity: .5;
+  }
+  
