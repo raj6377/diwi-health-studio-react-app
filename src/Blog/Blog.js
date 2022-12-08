@@ -1,8 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './blog.css'
+import { db } from '../Firebase-config/Firebase-config';
 import bgImg from '../Images/Blog/bgx.jpg'
 
 export default function Blog() {
+
+    const [data,setData]=useState([]);
+
+   
+useEffect(()=>{
+    db.collection('Blogs').onSnapshot((snapshot)=>{
+        const blog=[];
+        snapshot.forEach((doc)=>{
+            blog.push({...doc.data(),id:doc.id});
+        });       
+        setData(blog);
+        console.log(data);
+    })
+},[]);
+
     return (
     <div className="main-blog-div">
         <div className='bg-img'>
@@ -13,30 +29,15 @@ export default function Blog() {
         <div className='next-div'/>
 
         <div className='blog-cards'>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 1</h2>
-            </div>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 2</h2>
-            </div>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 3</h2>
-            </div>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 4</h2>
-            </div>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 5</h2>
-            </div>
-            <div>
-                <img src='https://picsum.photos/200'/>
-                <h2>Blog 6</h2>
-            </div>
+            {data.map((item)=>{
+                return(
+                    <div>
+                    <img src='https://picsum.photos/200'/>
+                    {/* <h2>{item.}</h2> */}
+                </div>
+                )
+            })}
+            
         </div>
 
         <div className='next-div'/>

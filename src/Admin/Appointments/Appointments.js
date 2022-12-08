@@ -1,11 +1,12 @@
 import react, { useState, useEffect } from 'react';
 import './Appointments.css'
 import { db } from '../../Firebase-config/Firebase-config';
-import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query,addDoc} from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
 const Admin = (props) => {
     const [data, setData] = useState([]);
+    const {Address,DateRequested,Age,Gender,Mail,Mobile,Name,Purpose,TimeRequested} = data;
     
     useEffect(()=>{
         props.setNavShow(false)
@@ -27,6 +28,12 @@ const Admin = (props) => {
         if (window.confirm("Are you sure you want to delete?")) {
             db.collection('Appointment').doc(id).delete();
         }
+    };
+
+    const AccAppointmnetCollectionRef = collection(db,"AccAppointment");
+
+    const pushToAccAppointments = async (id) => {
+        await addDoc(AccAppointmnetCollectionRef,{id, Name, Age, Gender, Mobile, Mail, Address, Purpose, DateRequested, TimeRequested})
     }
 
     return (
@@ -89,11 +96,11 @@ const Admin = (props) => {
                                             <a onClick={() => onDelete(item.id)}>
                                                 <i className="fas fa-trash-alt fa-lg delete-btn" />
                                             </a>
-                                            <Link to={`/view/${item.id}`}>
-                                                <a >
+                                                <a onClick={() => pushToAccAppointments(item.id)}>
+                                                    <Link to={`/AccAppointments`}>
                                                     <i className="fa-sharp fa-solid fa-check fa-lg tick-btn" />
+                                                    </Link>
                                                 </a>
-                                            </Link>
                                         </td>
                                     </tr>
                                 );

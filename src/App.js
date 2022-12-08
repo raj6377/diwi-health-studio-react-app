@@ -11,6 +11,8 @@ import Appointments from './Admin/Appointments/Appointments';
 import Admin from './Admin/Dashboard/Dashboard'
 import Edit from './Admin/Reschedule/Reschedule';
 import WriteBlog from './Admin/WriteBlog/WriteBlog';
+import AccAppointments from './Admin/AccAppointments/AccAppointments';
+import PastAppointments from './Admin/PastAppointments/PastAppointments';
 
 import { useState } from 'react'
 
@@ -31,6 +33,8 @@ function App() {
           <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/Dashboard' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/Appointments' element={<Appointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/AccAppointments' element={<AccAppointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/PastAppointments' element={<PastAppointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
           <Route path='/WriteBlog' element={<WriteBlog/>}/>
 
