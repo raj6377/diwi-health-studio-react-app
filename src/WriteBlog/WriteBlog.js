@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './WriteBlog.css'
 import { db } from '../Firebase-config/Firebase-config';
 import { addDoc, collection } from 'firebase/firestore'
-
 import {useNavigate} from 'react-router-dom'
 
 
@@ -11,6 +10,7 @@ const WriteBlog = () => {
   const [newText,setText] = useState('');
 
   const appointmnetCollectionRef = collection(db,"Blogs");
+  const navigate=useNavigate();
 
   const createAppointment = async ()=>{
     await addDoc(appointmnetCollectionRef,{Title:newTitle , Text:newText })
