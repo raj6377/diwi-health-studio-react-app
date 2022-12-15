@@ -5,7 +5,7 @@
     gap: -5rem;
     justify-content: center;
     align-items:center;
-    /* border: 2px solid black; */
+    /* border: 2px solid red; */
 }
 
 .all-appointments{
@@ -28,7 +28,7 @@
 .all-appointments-blogs{
     padding-top: 50px;
     padding-right: 60px;
-    border: 1px solid rgb(7, 169, 209);
+    /* border: 1px solid #192138; */
     border-radius: 2%;
     box-shadow: 0 5px 25px 0 rgb(0, 0, 0);
 }

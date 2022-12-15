@@ -1,6 +1,7 @@
 import React,{ useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import './Dashboard.css'
+import bg from '../../Images/dashboard/bg.jpg'
 
 export default function Admin(props) {
     
@@ -12,6 +13,7 @@ export default function Admin(props) {
     return (
         <>
             <div className='full-admin-div'>
+            <img className='write-blog-bg' src={bg}></img>
                 <div className='all-appointments-blogs'>    
                     <div className='all-appointments'>    
                         <Link to='/Appointments'><h1 className='logIn-btn' >New Appointments</h1></Link>

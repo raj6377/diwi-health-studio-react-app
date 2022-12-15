@@ -1,7 +1,7 @@
 import './login.css'
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import bg from '../../Images/dashboard/bg.jpg'
 import  log  from '../../Images/navbar/logo1.png'
 
 const Login = (props) =>{
@@ -14,6 +14,7 @@ const Login = (props) =>{
     return(
         <>
             <div className='logIn-outer-div'>
+                <img className='write-blog-bg' src={bg}></img>
                 <div className='logIn-inner-div'>
                     <img src={log}></img>
                     <div className='user-pass-field'>
