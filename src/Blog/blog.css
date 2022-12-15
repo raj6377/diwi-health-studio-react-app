@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -87,4 +90,37 @@ body{
         white 6px
     ); */
     background-size: 430px 1px;
+}
+
+
+/* ************** Single blog css ******************* */
+
+.single-blog-outer-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    /* height: 100vh; */
+    max-height: max-content;
+    /* border: 2px solid red; */
+}
+
+.single-blog-inner-div{
+    font-family: "Jost", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    /* height: 100vh; */
+    max-height: max-content;
+    /* border: 2px solid yellow; */
+}
+
+.single-blog-inner-div img{
+    margin: 30px;
+}
+
+.single-blog-inner-div h1{
+    margin-bottom: 20px;
 }
