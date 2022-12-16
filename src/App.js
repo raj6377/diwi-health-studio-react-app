@@ -29,7 +29,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/Services' element={<Services/>}/>
           <Route path='/Blog' element={<Blog/>}/>
-          <Route path='/SingleBlog' element={<SingleBlog setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/SingleBlog/:id' element={<SingleBlog setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/About' element={<About/>}/>
           <Route path='/Book' element={<Book/>}/>
           <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>

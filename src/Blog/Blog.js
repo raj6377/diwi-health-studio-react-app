@@ -4,7 +4,7 @@ import { db } from '../Firebase-config/Firebase-config';
 import bgImg from '../Images/Blog/bgx.jpg'
 import GoToTop from '../GoToTop';
 import { collection, onSnapshot } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Blog() {
     const [users,setUsers] = useState([]);
@@ -41,8 +41,10 @@ useEffect(()=>{
             {users && users.map((item)=>{
                 return(
                     <div>
+                        <Link style={{color:'BLACK'}} to={`/SingleBlog/${item.id}`}>   
                     <img src={item.img}/>
                     <h2>{item.Title}</h2>
+                    </Link> 
                     </div>
                 )
             })}
