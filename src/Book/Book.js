@@ -6,9 +6,10 @@ import smileImg from '../Images/book-appointment/smile.png'
 
 import { db } from '../Firebase-config/Firebase-config'
 import { addDoc, collection } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
 
 export default function Book() {
-
+  const navigate = useNavigate();
   const appointmnetCollectionRef = collection(db,"Appointment");
 
   const [newName,setName] = useState("");
@@ -21,11 +22,12 @@ export default function Book() {
   const [newTime,setTime] = useState("null");
   const [newPurpose,setPurpose] = useState("null");
 
-  const createAppointment = async ()=>{
+  const createAppointment = async (e)=>{
+    e.preventDefault();
+    navigate('/Payment');
     await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
   }
 
-  window.onload = init;
   
   function init(){
     // the code to be called when the dom has loaded

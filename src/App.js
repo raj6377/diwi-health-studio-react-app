@@ -16,6 +16,8 @@ import PastAppointments from './Admin/PastAppointments/PastAppointments';
 import SingleBlog from './Blog/SingleBlog'
 
 import { useState } from 'react'
+import Payment from './Payment/Payment';
+import Success from './Success/Success';
 
 function App() {
 
@@ -39,7 +41,8 @@ function App() {
           <Route path='/PastAppointments' element={<PastAppointments setNavShow={setShowNav} statusNavShow={showNav}/>}/>
           <Route path='/update/:id' element={<Edit/>}/>
           <Route path='/WriteBlog' element={<WriteBlog setNavShow={setShowNav} statusNavShow={showNav}/>}/>
-
+          <Route path='/Payment' element={<Payment setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+          <Route path='/Success' element={<Success setNavShow={setShowNav} statusNavShow={showNav}/>}/>
         </Routes>
       </div>
       {showNav && <Footer />}
