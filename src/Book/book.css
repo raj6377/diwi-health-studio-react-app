@@ -258,7 +258,7 @@
 }
 
 
-/* CSS */
+/* CSS btn */
 .close-button {
   align-self: center;
   background-color: #fff;
@@ -297,4 +297,37 @@
 
 .close-button:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+/* ******* Disappearing icons in date and time input tags */
+
+input[type="date"]::-webkit-calendar-picker-indicator  {
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    width: 100%;;
+    /* border: 2px solid red; */
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    width: 100%;;
+    /* border: 2px solid red; */
+}
+
+.emp-time-date-div{
+    position: absolute;
+    /* border: 2px solid red; */
+    pointer-events:none; 
+    height: 5vh;
+    width: 160px;
+    color: black;
+    padding-top: 5px;
+}
+
+.date-time-tags{
+    display: flex;
+    /* border: 2px solid red; */
 }

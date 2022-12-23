@@ -44,6 +44,27 @@ export default function Book() {
     // console.log("idk : ",document.getElementById("dateTag").setAttribute('min',today))
     // #document has its nodes
     // window.location.href="/";
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(mm==12){
+      yyyy += 1
+      mm = 1
+    }
+    else{
+      mm += 1
+    }
+
+    if (dd < 10)
+      dd = '0' + dd;
+    
+    if (mm < 10) 
+      mm = '0' + mm;
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("dateTag").setAttribute("max", today);
   }
 
 
@@ -96,11 +117,13 @@ export default function Book() {
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Address' className='input-tag' onChange={(event) => setAddress(event.target.value)}/>
                   </div>
-                  <div className='form-column-div'>
-                    <input type='date' placeholder=' Date' pattern="^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$"className='input-tag' id='dateTag' onChange={(event) => setDate(event.target.value)}/>
+                  <div className='form-column-div date-time-tags'>
+                    <input type='date' placeholder=' Date' onClick={init} pattern="^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$"className='input-tag' id='dateTag' onChange={(event) => setDate(event.target.value)}/>
+                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newDate==="null")? "Date":newDate}</div>
                   </div>
-                  <div className='form-column-div'>
-                    <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" onChange={(event) => setTime(event.target.value)}/>
+                  <div className='form-column-div date-time-tags'>
+                    <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" id='timeTag' onChange={(event) => setTime(event.target.value)}/>
+                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newTime==="null")? "Time":newTime}</div>
                   </div>
                   <div className='form-column-div'>
                     <textarea type='text' placeholder=' Purpose' className='input-tag purpose-text' onChange={(event) => setPurpose(event.target.value)}/>
