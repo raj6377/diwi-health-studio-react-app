@@ -4,6 +4,7 @@ import './book.css'
 import PopUp from './PopUp'
 import bgImg from '../Images/book-appointment/bg.jpg'
 import smileImg from '../Images/book-appointment/smile.png'
+import GoToTop from '../GoToTop'
 
 import { db } from '../Firebase-config/Firebase-config'
 import { addDoc, collection } from 'firebase/firestore'
@@ -118,7 +119,7 @@ export default function Book() {
           </div>
     </div>
          
-
+    <GoToTop/>
     </>
   )
 }

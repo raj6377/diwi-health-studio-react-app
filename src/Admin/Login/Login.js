@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bg from '../../Images/dashboard/bg.jpg'
 import  log  from '../../Images/navbar/logo1.png'
+import GoToTop from '../../GoToTop'
 
 const Login = (props) =>{
 
@@ -29,6 +30,7 @@ const Login = (props) =>{
                 </div>
                 </div>
             </div>
+            <GoToTop/>
         </>
     );
 }

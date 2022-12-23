@@ -6,7 +6,7 @@ import general from '../Images/home/1.jpg'
 import cosmetic from '../Images/home/2.jpg'
 import surgical from '../Images/home/3.jpg'
 import { Link } from 'react-router-dom'
-
+import GoToTop from '../GoToTop'
 
 export default function Home() {
   
@@ -109,6 +109,7 @@ export default function Home() {
       </div>
 
     </div>
+    <GoToTop/>
     </>
   )
 }
