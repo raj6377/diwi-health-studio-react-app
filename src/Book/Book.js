@@ -95,10 +95,11 @@ export default function Book() {
                     <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" onChange={(event) => setTime(event.target.value)}/>
                   </div>
                   <div className='form-column-div'>
-                    <input type='text' placeholder=' Purpose' className='input-tag' onChange={(event) => setPurpose(event.target.value)}/>
+                    {/* <input type='text' placeholder=' Purpose' className='input-tag' onChange={(event) => setPurpose(event.target.value)}/> */}
+                    <textarea type='text' placeholder=' Purpose' className='input-tag purpose-text' onChange={(event) => setPurpose(event.target.value)}/>
                   </div>
-                  <div className='submit-button'>
-                    <button onClick={createAppointment}> Submit </button>
+                  <div className='submit-button-div'>
+                    <button className='logIn-btn' onClick={createAppointment}> Submit </button>
                   </div>
                 </form>
 
