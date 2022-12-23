@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './book.css'
+import PopUp from './PopUp'
 import bgImg from '../Images/book-appointment/bg.jpg'
 import smileImg from '../Images/book-appointment/smile.png'
 
@@ -12,6 +13,8 @@ export default function Book() {
   const navigate = useNavigate();
   const appointmnetCollectionRef = collection(db,"Appointment");
 
+  const [sMsg,setsMsg] = useState(false)
+ 
   const [newName,setName] = useState("");
   const [newAge,setAge] = useState(0);
   const [newGender,setGender] = useState("Male");
@@ -23,14 +26,14 @@ export default function Book() {
   const [newPurpose,setPurpose] = useState("null");
 
   const createAppointment = async (e)=>{
-    // e.preventDefault();
-   navigate('/Payment');
-    await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
+    e.preventDefault();
+  //  navigate('/Payment');
+  await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
+  setsMsg(true);
+
   }
 
-  // document.getElementById("my-form").addEventListener('click',function(e){
-  //   e.preventDefault();
-  // })
+  
   
   function init(){
     // the code to be called when the dom has loaded
@@ -41,6 +44,8 @@ export default function Book() {
     // #document has its nodes
     // window.location.href="/";
   }
+
+
   
   return (
     <>
@@ -63,11 +68,10 @@ export default function Book() {
           </div>
 
         </div>
-
+          <PopUp trigger={sMsg} setTrigger={setsMsg}><h3>Appointment Booked Successfully!!</h3></PopUp>
           <div className='inner1'>
-          
               <div className='main-form-div'>
-
+            <h3 >Name, Age and phone number are mendatory to fill.</h3>
                 <form className='main-form' onSubmit={createAppointment}>
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>

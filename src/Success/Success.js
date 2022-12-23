@@ -6,6 +6,7 @@ const Success = (props) =>{
     useEffect(()=>{
         props.setNavShow(false)
     },[props.setNavShow])
+    
 return(
     <div className='success'>
         <div className="success-header">
