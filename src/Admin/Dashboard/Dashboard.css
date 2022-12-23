@@ -32,3 +32,9 @@
     border-radius: 2%;
     box-shadow: 0 5px 25px 0 rgb(0, 0, 0);
 }
+
+.dash-btn{
+    margin-bottom: 40px;
+    margin-left: 75px;
+    /* border: 2px solid red; */
+}

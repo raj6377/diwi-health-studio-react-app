@@ -23,11 +23,14 @@ export default function Book() {
   const [newPurpose,setPurpose] = useState("null");
 
   const createAppointment = async (e)=>{
-    e.preventDefault();
-    navigate('/Payment');
+    // e.preventDefault();
+   navigate('/Payment');
     await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
   }
 
+  // document.getElementById("my-form").addEventListener('click',function(e){
+  //   e.preventDefault();
+  // })
   
   function init(){
     // the code to be called when the dom has loaded
@@ -62,10 +65,10 @@ export default function Book() {
         </div>
 
           <div className='inner1'>
-
+          
               <div className='main-form-div'>
 
-                <form className='main-form'>
+                <form className='main-form' onSubmit={createAppointment}>
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>
                   </div>
@@ -95,11 +98,10 @@ export default function Book() {
                     <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" onChange={(event) => setTime(event.target.value)}/>
                   </div>
                   <div className='form-column-div'>
-                    {/* <input type='text' placeholder=' Purpose' className='input-tag' onChange={(event) => setPurpose(event.target.value)}/> */}
                     <textarea type='text' placeholder=' Purpose' className='input-tag purpose-text' onChange={(event) => setPurpose(event.target.value)}/>
                   </div>
                   <div className='submit-button-div'>
-                    <button className='logIn-btn' onClick={createAppointment}> Submit </button>
+                    <button className='logIn-btn' id="my-form" > Submit </button>
                   </div>
                 </form>
 
