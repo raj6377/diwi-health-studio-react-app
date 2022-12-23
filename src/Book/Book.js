@@ -27,10 +27,10 @@ export default function Book() {
 
   const createAppointment = async (e)=>{
     e.preventDefault();
-  //  navigate('/Payment');
-  await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
-  setsMsg(true);
-
+    //  navigate('/Payment');
+    await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
+    setsMsg(true);
+  
   }
 
   

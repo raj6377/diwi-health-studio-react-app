@@ -23,14 +23,14 @@ export default function PopUp(props) {
 
   return (props.trigger) ? (
     <div className='popup'>
-        <ReactConfetti
+        {/* <ReactConfetti
             width={windowDimension.width}
             height={windowDimension.height}
             tweenDuration={100}
             opacity={1}
             wind={0.1}
             
-        />
+        /> */}
 
         <div className="popup-inner">
             <button className="close-button popup-close-btn" onClick={()=>props.setTrigger(false)}>close</button>
