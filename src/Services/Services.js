@@ -4,13 +4,19 @@ import './Services.css'
 import Display from './Showcase'
 import bg from '../Images/services/bgx.jpg'
 import GoToTop from '../GoToTop'
+import { useNavigate } from 'react-router-dom'
 
 export default function Services() {
 
+  const navigate = useNavigate()
+
   return (
     <div>
-
-      <div className='emp-div-for-bg'> <img src={bg}/></div>
+      <div className='emp-div-for-bg'> 
+        <img src={bg}/>
+        <button className="book-now" onClick={()=> navigate('/book')}>Book Now</button>
+      </div>
+      
       <div className='serv-div-outer'>
             {
               services.map((currServ)=>{
