@@ -1,58 +1,82 @@
-import React,{useState,useEffect} from 'react'
-import './blog.css'
-import { db } from '../Firebase-config/Firebase-config';
-import bgImg from '../Images/Blog/bgx.jpg'
-import GoToTop from '../GoToTop';
-import { collection, onSnapshot } from 'firebase/firestore';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import "./blog.css";
+import { db } from "../Firebase-config/Firebase-config";
+import bgImg from "../Images/Blog/bgx.jpg";
+import GoToTop from "../GoToTop";
+import { collection, onSnapshot } from "firebase/firestore";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Blog() {
-    const [users,setUsers] = useState([]);
-    const [loading,setLoading] = useState(false);
-    const navigate=useNavigate();
-   
-useEffect(()=>{
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
     setLoading(true);
-    const unsub=onSnapshot(collection(db,'Blogs'),(snapshot)=>{
-        let list = []
-        snapshot.docs.forEach((doc)=>{
-            list.push({id:doc.id,...doc.data()})
+    const unsub = onSnapshot(
+      collection(db, "Blogs"),
+      (snapshot) => {
+        let list = [];
+        snapshot.docs.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
         });
         setUsers(list);
         setLoading(false);
-    },(error)=>{
+      },
+      (error) => {
         console.log(error);
-    });
-   return ()=>{
-    unsub();
-   };
-},[]);
+      }
+    );
+    return () => {
+      unsub();
+    };
+  }, []);
 
-    return (
+  return (
     <div className="main-blog-div">
-        <div className='bg-img'>
-            <img className='bg-img' src={bgImg}/>
-        </div>
-        <h2 className='blog-head' >Blogs</h2>
+      <div className="bg-img">
+        <img className="bg-img" src={bgImg} />
+      </div>
+      <h2 className="blog-head">Blogs</h2>
 
-        <div className='next-div'/>
-
-        <div className='blog-cards'>
-            {users && users.map((item)=>{
-                return(
-                    <div>
-                        <Link style={{color:'BLACK'}} to={`/SingleBlog/${item.id}`}>   
-                    <img src={item.img}/>
+      <div className="next-div" />
+      <div>
+        <input
+          type="text"
+          placeholder="search..."
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+      <div className="blog-cards">
+        {users &&
+          users
+            .filter((item) => {
+              if (searchTerm == "") {
+                return item;
+              } else if (
+                item.Title.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return item;
+              }
+            })
+            .map((item) => {
+              return (
+                <div>
+                  <Link
+                    style={{ color: "BLACK" }}
+                    to={`/SingleBlog/${item.id}`}
+                  >
+                    <img src={item.img} />
                     <h2>{item.Title}</h2>
-                    </Link> 
-                    </div>
-                )
+                  </Link>
+                </div>
+              );
             })}
-            
-        </div>
+      </div>
 
-        <div className='next-div'/>
-    <GoToTop/>
+      <div className="next-div" />
+      <GoToTop />
     </div>
-  )
+  );
 }
