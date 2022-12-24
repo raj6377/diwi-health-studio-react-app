@@ -7,6 +7,12 @@ import cosmetic from '../Images/home/2.jpg'
 import surgical from '../Images/home/3.jpg'
 import { Link } from 'react-router-dom'
 import GoToTop from '../GoToTop'
+import { reviews } from './testimonials'
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Home() {
   
@@ -92,20 +98,77 @@ export default function Home() {
       </div>
 
       <div className='testimonial-outer-div'>
-        <div className='testimonial-inner-div'>
 
-          <div className='testimonial-upper'>
-            <div className='testimonial-pic'>
-              <img src='https://picsum.photos/100/100' />
-            </div>
-            <h2> Abhishekh </h2>
-          </div>
+      <div className="testimonial-text">
+        <h1>Testimonials</h1>
+      </div>
 
-          <div className='testimonial-lower'>
-            <p>{testimonial}</p>
-          </div>
+      <hr/>
+      
+      <Swiper
+        slidesPerView={2}
+        spaceBetween={40}
+        autoHeight = {false}
+        autoplay = {{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
 
-        </div>
+        pagination={{
+          clickable: true,
+        }}
+        
+        navigation = {true}
+        modules={[Autoplay, Pagination, Navigation]}
+      >
+        
+
+
+
+        {
+          reviews.map((currReview) =>{
+            return (<>
+            {/* <SwiperSlide> */}
+            
+
+              <SwiperSlide className="testimonial-inner-div">
+                <div className="testimonial-upper">
+                  <div className="pic-name-rate">
+                    <div className="testimonial-pic">
+                      <img src={currReview.img} />
+                    </div>
+                    <div className="name-rate">
+                      <h2>
+                        {currReview.name}
+                      </h2>
+                      <div>
+                        <i style={{color:"gold"}} className="fa-solid fa-star"/>
+                        <i style={{color:"gold"}} className="fa-solid fa-star"/>
+                        <i style={{color:"gold"}} className="fa-solid fa-star"/>
+                        <i style={{color:"gold"}} className="fa-solid fa-star"/>
+                        <i style={{color:"gold"}} className="fa-solid fa-star"/>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                  <div className="testimonial-lower">
+                    <p>{currReview.context}</p>
+                  </div>
+              </SwiperSlide>
+
+            {/* </SwiperSlide> */}
+            </>
+            );
+          })
+        }
+
+        </Swiper>
+
+
+
       </div>
 
     </div>
