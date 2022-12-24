@@ -40,14 +40,21 @@ export default function Blog() {
       </div>
       <h2 className="blog-head">Blogs</h2>
 
-      <div className="next-div" />
-      <div>
-        <input
-          type="text"
-          placeholder="search..."
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="next-div" >
+
+      <div className="search-box">
+        <button className="btn-search"><i className="fas fa-search"></i></button>
+          <input 
+            className="input-search"
+            type="text"
+            placeholder="search..."
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
       </div>
+      </div>
+
+
+
       <div className="blog-cards">
         {users &&
           users
@@ -64,7 +71,7 @@ export default function Blog() {
               return (
                 <div>
                   <Link
-                    style={{ color: "BLACK" }}
+                    style={{ color: "BLACK" ,textDecoration: "none"}}
                     to={`/SingleBlog/${item.id}`}
                   >
                     <img src={item.img} />
