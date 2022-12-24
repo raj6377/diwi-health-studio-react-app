@@ -106,11 +106,11 @@ export default function Home() {
       <hr/>
       
       <Swiper
-        slidesPerView={2}
+        slidesPerView={3}
         spaceBetween={40}
         autoHeight = {false}
         autoplay = {{
-          delay: 3500,
+          delay: 5500,
           disableOnInteraction: false,
         }}
 

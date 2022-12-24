@@ -54,6 +54,7 @@ export const reviews = [
     name: "shefali",
     img: shefu,
     context: `Best place to get dental treatment in delhi. I went there to get my wisdom tooth removal, It was 
-        very good experience since the doctor was communicative making it easy for me to divert myself from the fright.`,
+        very good experience since the doctor was communicative 
+        making it easy for me to divert myself from the fright.`,
   },
 ];
