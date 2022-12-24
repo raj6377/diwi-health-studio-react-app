@@ -11,7 +11,7 @@ export const reviews = [
         id: 1,
         name:'simranjit kaur',
         img: sim,
-        context: `Recent visited for my wisdom tooth extraction Doctor was taking all the safety measures,
+        context: `Recently visited for my wisdom tooth extraction Doctor was taking all the safety measures,
         the clinic is equipped with modern tools and it was hygienic .
         The extraction surgery went well ,highly recommended.`
     },
@@ -19,21 +19,28 @@ export const reviews = [
         id: 2,
         name:'Benjamin Joseph',
         img: ben,
-        context: `Amazing service and very friendly staff!`
-        
+        context: `Dr. Pinky is an excellent dentist. 
+        She took the time to explain every procedure she was doing. For example, when I got my teeth whitened, 
+        Dr. Pinky was very supportive, and thorough when explaining the process. 
+        She is a professional and has a naturally lovely personality. `
     },
     {
         id: 3,
         name:'Deversh',
         img: dev,
-        context: `It was great experience here`
+        context: `No pain or problems with my extractions and 
+        she goes above and beyond the call of duty to make sure you understand what you should do with your teeth 
+        and mouth so you do not have future health risks. 
+        I found her to be very professional and truly caring about your oral health.`
         
     },
     {
         id: 4,
         name:'abhishek',
         img: abhishek,
-        context: `doctor is really good, hygienic place, proper treatment is provided.`
+        context: `Excellent doctor!!!Very thorough and caring. 
+        I'm terribly afraid of the dentist and she's very sensitive to that 
+        and goes the extra mile to make you feel comfortable.`
     },
     {
         id: 5,
