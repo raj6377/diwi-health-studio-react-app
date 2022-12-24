@@ -44,10 +44,12 @@
     border: 2px solid #ff2057;
 }
 
-
-.logIn-btn {
+.logIn-buttons button{
     margin-bottom: 40px;
     margin-left: 75px;
+}
+
+.logIn-btn {
     background: #ff2057;
     border: 1px solid #ff2057;
     border-radius: 6px;

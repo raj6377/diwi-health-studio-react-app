@@ -5,7 +5,8 @@ import pic1 from '../Images/home/tools1.jpg'
 import general from '../Images/home/1.jpg'
 import cosmetic from '../Images/home/2.jpg'
 import surgical from '../Images/home/3.jpg'
-
+import { Link } from 'react-router-dom'
+import GoToTop from '../GoToTop'
 
 export default function Home() {
   
@@ -26,7 +27,7 @@ export default function Home() {
     <video autoPlay loop muted playsInline className="bg-vid">
       <source src={vid} type="video/mp4"></source>  
     </video>
-
+    
     <div className='title'>
       <h1><span className='title-color'>Diwi</span> <span className='title-color'>Health</span> 
           <span className='title-color'> Studio</span></h1>
@@ -41,6 +42,7 @@ export default function Home() {
       <div className='services-brief'>
         <div className='services-tag-line'>Comprehensive care, one convenient location</div>
 
+        <Link to="/services" style={{textDecoration: "none"}}>
         <div className='service-card'>
           <img src={general} alt="general-checkup"/>
           <br/>
@@ -49,22 +51,27 @@ export default function Home() {
           <br/>
           <p>Everything you expect and then some. Cleanings, fillings, and x-rays are just the beginning.</p>
         </div>
-        <div className='service-card'>
-          <img src={cosmetic} alt="cosmetic-treatment"/>
-          <br/>
-          <br/>
-          <h5> Cosmetic</h5>
-          <br/>
-          <p>Discover your “wow!” factor. Invisalign, veneers, and in-office or take-home teeth whitening.</p>
-        </div>
-        <div className='service-card'>
-          <img src={surgical} alt="surgical-treatment"/>
-          <br/>
-          <br/>
-          <h5>Surgical</h5>
-          <br/>
-          <p>We can fix anything. Our dentists repair damaged or lost teeth with cutting-edge implants and more.</p>
-        </div>
+        </Link>
+        <Link to='/services' style={{textDecoration: "none"}}>
+          <div className='service-card'>
+            <img src={cosmetic} alt="cosmetic-treatment"/>
+            <br/>
+            <br/>
+            <h5> Cosmetic</h5>
+            <br/>
+            <p>Discover your “wow!” factor. Invisalign, veneers, and in-office or take-home teeth whitening.</p>
+          </div>
+        </Link>
+        <Link to='/services' style={{textDecoration: "none"}}>
+          <div className='service-card'>
+            <img src={surgical} alt="surgical-treatment"/>
+            <br/>
+            <br/>
+            <h5>Surgical</h5>
+            <br/>
+            <p>We can fix anything. Our dentists repair damaged or lost teeth with cutting-edge implants and more.</p>
+          </div>
+        </Link>
 
       </div>
 
@@ -102,6 +109,7 @@ export default function Home() {
       </div>
 
     </div>
+    <GoToTop/>
     </>
   )
 }

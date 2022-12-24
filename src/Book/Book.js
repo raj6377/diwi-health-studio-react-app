@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import './book.css'
+import PopUp from './PopUp'
 import bgImg from '../Images/book-appointment/bg.jpg'
 import smileImg from '../Images/book-appointment/smile.png'
+import GoToTop from '../GoToTop'
 
 import { db } from '../Firebase-config/Firebase-config'
 import { addDoc, collection } from 'firebase/firestore'
@@ -12,6 +14,8 @@ export default function Book() {
   const navigate = useNavigate();
   const appointmnetCollectionRef = collection(db,"Appointment");
 
+  const [sMsg,setsMsg] = useState(false)
+ 
   const [newName,setName] = useState("");
   const [newAge,setAge] = useState(0);
   const [newGender,setGender] = useState("Male");
@@ -24,10 +28,13 @@ export default function Book() {
 
   const createAppointment = async (e)=>{
     e.preventDefault();
-    navigate('/Payment');
+    //  navigate('/Payment');
     await addDoc(appointmnetCollectionRef,{Name:newName , Age:newAge , Gender:newGender , Mobile:newMobile , Mail:newMail , Address:newAddress , Purpose:newPurpose , DateRequested: newDate , TimeRequested: newTime})
+    setsMsg(true);
+  
   }
 
+  
   
   function init(){
     // the code to be called when the dom has loaded
@@ -37,7 +44,30 @@ export default function Book() {
     // console.log("idk : ",document.getElementById("dateTag").setAttribute('min',today))
     // #document has its nodes
     // window.location.href="/";
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(mm==12){
+      yyyy += 1
+      mm = 1
+    }
+    else{
+      mm += 1
+    }
+
+    if (dd < 10)
+      dd = '0' + dd;
+    
+    if (mm < 10) 
+      mm = '0' + mm;
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("dateTag").setAttribute("max", today);
   }
+
+
   
   return (
     <>
@@ -60,12 +90,11 @@ export default function Book() {
           </div>
 
         </div>
-
+          <PopUp trigger={sMsg} setTrigger={setsMsg}><h3>Appointment Booked Successfully!!</h3></PopUp>
           <div className='inner1'>
-
               <div className='main-form-div'>
-
-                <form className='main-form'>
+            <h3 >Name, Age and phone number are mendatory to fill.</h3>
+                <form className='main-form' onSubmit={createAppointment}>
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>
                   </div>
@@ -88,17 +117,19 @@ export default function Book() {
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Address' className='input-tag' onChange={(event) => setAddress(event.target.value)}/>
                   </div>
-                  <div className='form-column-div'>
-                    <input type='date' placeholder=' Date' pattern="^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$"className='input-tag' id='dateTag' onChange={(event) => setDate(event.target.value)}/>
+                  <div className='form-column-div date-time-tags'>
+                    <input type='date' placeholder=' Date' onClick={init} pattern="^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$"className='input-tag' id='dateTag' onChange={(event) => setDate(event.target.value)}/>
+                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newDate==="null")? "Date":newDate}</div>
+                  </div>
+                  <div className='form-column-div date-time-tags'>
+                    <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" id='timeTag' onChange={(event) => setTime(event.target.value)}/>
+                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newTime==="null")? "Time":newTime}</div>
                   </div>
                   <div className='form-column-div'>
-                    <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" onChange={(event) => setTime(event.target.value)}/>
+                    <textarea type='text' placeholder=' Purpose' className='input-tag purpose-text' onChange={(event) => setPurpose(event.target.value)}/>
                   </div>
-                  <div className='form-column-div'>
-                    <input type='text' placeholder=' Purpose' className='input-tag' onChange={(event) => setPurpose(event.target.value)}/>
-                  </div>
-                  <div className='submit-button'>
-                    <button onClick={createAppointment}> Submit </button>
+                  <div className='submit-button-div'>
+                    <button className='logIn-btn' id="my-form" > Submit </button>
                   </div>
                 </form>
 
@@ -111,7 +142,7 @@ export default function Book() {
           </div>
     </div>
          
-
+    <GoToTop/>
     </>
   )
 }
