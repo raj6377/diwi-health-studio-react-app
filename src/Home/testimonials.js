@@ -1,4 +1,3 @@
-import React from "react";
 import raj from "../Images/testimonials/raj.jpeg";
 import sim from "../Images/testimonials/sim.jpeg";
 import ben from "../Images/testimonials/ben.jpeg";
