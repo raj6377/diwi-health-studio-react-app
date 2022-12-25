@@ -1,89 +1,113 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500&family=Urbanist:ital,wght@0,100;0,300;0,500;1,400&display=swap');
-
-
-.main{
-    display: flex;
-    justify-content:space-between;
-    gap: 5rem;
+.bg-about{
+    position: absolute;
     width: 100%;
-    padding-top:7rem;
-    padding-bottom:5rem;
-
-    /* border: 2rem solid red; */
-    background-color: white;
+    height: 80vh;
+    object-fit:fill;
+    z-index: -1;
+    overflow: hidden;
+    /* border: 2px solid rgb(62, 255, 3); */
 }
 
-.main img{
-    height: 60vh;
-    margin-right: 7rem;
-    padding:20px;
-    border:2px lightblue solid;
-
-    /* border: 2rem solid black; */
-}
-
-.main div{
-    margin-left: 7rem;
-    padding: 1rem;
-    padding-top: 0;
-    /* border: .2rem solid blue; */
-}
-
-.main h2{
-    color:lightskyblue;
-    font-size: 4rem;
-    font-style:oblique;
-}
-
-.main p{
-    color: grey;
-    font-size: 1.5rem;
-    font-style: oblique;
-    text-align: justify;
-}
-
-.services{
-    background-color:whitesmoke;
-    width: 100%;
-    height:fit-content;
-    display: flex;
-    justify-content: space-evenly;
-}
-.services div{
-    background-color: white;
-    color: rgb(5, 38, 57);
-    width: 22vw;
-    margin: 5rem;
-    text-align: center;
-    padding: 1rem 1rem 4rem 1rem;
-    box-sizing: border-box;
-    max-height:fit-content;
-     transition: all, 1s;
-    /* border: 2px solid lightblue; */
-}
-.services div:hover{
-    background-color: white;
-    box-shadow: 2px 2px 5px 5px rgba(5, 38, 57, 0.5), 2px 2px 5px 5px lightblue;
-    transform:translateZ(10%);
-    transform:translateY(-5%);
-    transition: all, 1.3s;
-    cursor: pointer;
-    /* z-index: 115; */
-}
-
-.services img{
-    box-sizing: border-box;
-    max-width: 100%;
-    max-height: 100%;
-    height: 15vw;
-    width: 20vw;
+.bg-about img{
+    position: absolute;
+    width: 99vw;
+    height: 80vh;
     object-fit:cover;
+    filter: brightness(70%);
+    /* border: 2px solid rgb(62, 255, 3); */
 }
 
-.about-us-emp-div{
-    width: 98.5vw;
-    height: 10vh;
-    background-color:lightskyblue;
-    /* border: 2px solid black; */
+
+
+
+.emp-div-about{
+    height: 91vh;
+    width: 99vw;
+    /* border: 2px solid blue; */
 }
+
+
+.emp-div-about div.emp-title{
+    height: max-content;
+    width: max-content;
+    position: relative;
+    left: 10%;
+    top: 35%;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    font: small-caps bold 1.5rem/1 sans-serif;
+    /* border: 2px solid rgb(62, 255, 3); */
+}
+
+.emp-div-about div.exc-care{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    background-image: conic-gradient(#fff,white);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: -425px 0;
+    animation: backcolor1 3.5s linear infinite alternate;
+    /* border: 2px solid rgb(62, 255, 3); */
+}
+
+@keyframes backcolor1{
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.emp-div-about div.all-ages{
+    width: max-content;
+    margin: auto;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    background-image: conic-gradient(#ffff,#ffff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: -325px 0;
+    animation: backcolor2 3.5s linear infinite alternate;
+    /* border: 2px solid rgb(62, 255, 3); */
+}
+
+@keyframes backcolor2{
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.about-us-main{
+    display: flex;
+    justify-content:center;
+    gap: 200px;
+    padding: 100px;
+    /* border: 2px solid red; */
+}
+
+.about-us-main img{
+    width: 400px;
+    height: 400px;
+}
+
+.about-doc{
+    font-size: 1.5rem;
+    width: 500px;
+    height: max-content;
+}
+
+.about-doc hr{
+    border: 5px solid grey;
+}
+
+.about-doc-context{
+    padding: 10px 50px;
+}
+
+.doc-name{
+    font: small-caps bold 2rem/1 sans-serif;
+}
+
+
+
