@@ -14,6 +14,7 @@ export default function Footer() {
         <div className='footer'>
           <div className='social'>
             <h2>Social</h2>
+            <br/>
             <div className='social-svgs'>
 
             <ul>
@@ -23,6 +24,7 @@ export default function Footer() {
                 viewBox="0 0 448 512">
                 <path d={fbSvgPath}/>
                 </svg>
+                <br/>
                 </a>
               </li>
 
@@ -31,6 +33,7 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d= {instaSvgPath}/>
                 </svg>
+                <br/>
                 </a>
               </li>
 
@@ -51,12 +54,15 @@ export default function Footer() {
               <ul>
                 <li>
                   <h4>General</h4>
+                  <br/>
                 </li>
                 <li>
                   <h4>cosmetic</h4>
+                  <br/>
                 </li>
                 <li>
                   <h4>surgical</h4>
+                  <br/>
                 </li>
               </ul>
             </div>
@@ -65,7 +71,11 @@ export default function Footer() {
           <div className='contact-us'>
             <h2>Contact Us</h2>
             <div>
-              <h4>+916377483870</h4>
+              <h5>+916377483870</h5>
+              <br/>
+              <h5>diwi.healthstudio@gmail.com</h5>
+              <br/>
+              <h5>Shop No. 5, BG-6, Block BG 6,<br/> Paschim Vihar, New Delhi</h5>
             </div>
           </div>
           <div className='map'>

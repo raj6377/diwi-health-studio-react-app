@@ -12,13 +12,10 @@
 .footer div{
     font: 1.2em "Fira Sans", sans-serif;
     /* border: 2px solid rgb(5, 182, 49); */
-    width: auto;
 }
 
 
-.social{
-    display: grid;
-}
+
 
 .social-svgs{
     display: grid;
@@ -42,10 +39,11 @@
 
 
 .footer svg{
-    width: 2.5rem;
+    width: 2rem;
     color: aqua;
     background-color: rgb(50,100,148);
     fill: white;
+    padding-bottom: 10px;;
 }
 
 .footer li{
