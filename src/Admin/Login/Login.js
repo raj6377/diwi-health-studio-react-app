@@ -7,7 +7,7 @@ import GoToTop from '../../GoToTop'
 
 const Login = (props) =>{
 
-    useEffect(()=>{
+    useEffect((props)=>{
         props.setNavShow(false)
     },[props.setNavShow])
 
@@ -15,9 +15,9 @@ const Login = (props) =>{
     return(
         <>
             <div className='logIn-outer-div'>
-                <img className='write-blog-bg' src={bg}></img>
+                <img className='write-blog-bg' src={bg} alt='bg-img'></img>
                 <div className='logIn-inner-div'>
-                    <img src={log}></img>
+                    <img src={log} alt="logo"></img>
                     <div className='user-pass-field'>
                         <input type='text' placeholder=' Username'></input>
                         <br/>
