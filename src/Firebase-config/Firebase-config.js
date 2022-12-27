@@ -1,7 +1,7 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore'
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 import "firebase/compat/storage";
-
+import "firebase/compat/auth";
 
 //  const firebaseApp = firebase.initializeApp({
 //   apiKey: "AIzaSyAXnDL79fcW76RYpwYQcvvMDI6S4WRa5Gc",
@@ -13,18 +13,19 @@ import "firebase/compat/storage";
 //   measurementId: "G-1H02RB1YHF"
 //   });
 
-const firebaseConfig ={
+const firebaseConfig = {
   apiKey: "AIzaSyDPV_WB3_KzsKPhJX9D8AtaT9YBRFzdWMs",
   authDomain: "diwi-health-studio-370306.firebaseapp.com",
   projectId: "diwi-health-studio-370306",
   storageBucket: "diwi-health-studio-370306.appspot.com",
   messagingSenderId: "255046250570",
   appId: "1:255046250570:web:e89138593938362ee4f6b3",
-  measurementId: "G-BMGFY25V7F"
+  measurementId: "G-BMGFY25V7F",
 };
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-  const storage = firebase.storage();
-  export{db};
-  export {storage};
-  
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const storage = firebase.storage();
+const auth = firebase.auth();
+export { db };
+export { storage };
+export { auth };
