@@ -2,6 +2,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore'
 import "firebase/compat/storage";
 
+import { getAuth } from "firebase/auth";
+
 
 //  const firebaseApp = firebase.initializeApp({
 //   apiKey: "AIzaSyAXnDL79fcW76RYpwYQcvvMDI6S4WRa5Gc",
@@ -22,9 +24,10 @@ const firebaseConfig ={
   appId: "1:255046250570:web:e89138593938362ee4f6b3",
   measurementId: "G-BMGFY25V7F"
 };
-  firebase.initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
   const storage = firebase.storage();
   export{db};
   export {storage};
+  export const auth = getAuth(app);
   
