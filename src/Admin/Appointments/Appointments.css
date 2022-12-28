@@ -228,3 +228,8 @@ td{
 .app-nav-inactive{
     color: #008678;
 }
+
+.app-logout-btn-pos{
+    position: relative;
+    left: 30%;
+}

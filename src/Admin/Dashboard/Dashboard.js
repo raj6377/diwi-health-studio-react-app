@@ -30,7 +30,7 @@ export default function Admin(props) {
         <>
             <div className='full-admin-div'>
             <img className='write-blog-bg' src={bg}></img>
-            <button className="logIn-btn" onClick={logOut}>logout</button>
+            <button className="cancel-btn dash-logout-pos" onClick={logOut}>logout</button>
                 <div className='all-appointments-blogs'>    
                     <div className='all-appointments'>    
                         <Link to='/Appointments'><h1 className='logIn-btn dash-btn' >New Appointments</h1></Link>

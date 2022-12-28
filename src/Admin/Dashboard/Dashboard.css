@@ -38,3 +38,9 @@
     margin-left: 75px;
     /* border: 2px solid red; */
 }
+
+.dash-logout-pos{
+    position: relative;
+    left: 90%;
+    width: max-content;
+}

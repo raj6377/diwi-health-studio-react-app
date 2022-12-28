@@ -3,7 +3,11 @@ import { useState, useEffect} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { isEmpty } from 'lodash'
 
-const Edit=()=>{
+const Edit=(props)=>{
+
+    useEffect(()=>{
+        props.setNavShow(false)
+    },[props.setNavShow])
 
     const [data,setData]=useState([]);
     

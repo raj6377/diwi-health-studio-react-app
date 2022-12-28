@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../Firebase-config/Firebase-config";
 import AppNav from "../AppointmentNav/AppointmentNav";
 
+import { useAuth } from '../AuthContext/AuthContext'
+import { useNavigate } from 'react-router-dom';
+
 export default function PastAppointments(props) {
   const [data, setData] = useState([]);
   const [sortedData, setSortedData] = useState([]);
@@ -36,6 +39,23 @@ export default function PastAppointments(props) {
   // const pushToAccAppointments = async (id) => {
   //     await addDoc(appointmnetCollectionRef ,{id, Name, Age, Gender, Mobile, Mail, Address, Purpose, DateRequested, TimeRequested})
   // }
+
+    // Log out button 
+
+    const { logout } = useAuth()
+    const navigate = useNavigate()
+  
+    const logOut = async function(){
+      try{
+          await logout()
+          navigate("/login")
+      }
+      catch(error){
+          console.log("error :",error)
+      }
+  }
+
+
   const handleChange = (e) => {
     setSort(true);
     db.collection("PastAppointment")
@@ -57,6 +77,7 @@ export default function PastAppointments(props) {
       <div className="table-outer-container">
         <div className="emp-div-nav">
           <h1>Appointments</h1>
+          <button className="cancel-btn app-logout-btn-pos" onClick={logOut} >log out</button>
         </div>
         <div className="table-inner-container1">
           <div className="table-inner-container2">

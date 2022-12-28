@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import pic1 from '../Images/about/home-bg.jpg'
-import pic2 from '../Images/about/5.jpg'
+import docPic from '../Images/about/doc1.jpg'
 import GoToTop from '../GoToTop'
 // import general from '../Images/4.jpg'
 // import cosmetic from '../Images/5.jpg'
@@ -29,7 +29,7 @@ const About = ()=>{
       
         <div className="about-us-main">
           <div className="about-us-doc-img">
-            <img src={pic2}  />
+            <img src={docPic}  />
           </div>
           <div className="about-doc">
             <hr/>
@@ -39,6 +39,9 @@ const About = ()=>{
               <h5>Why dentistry ?</h5>
               <br/>
               <p>Dentistry has always been dear to me, as I was exposed to it at a very young age watching my grandfather treat patients in rural Oklahoma. Dentistry offers the unique opportunity to build lifelong relationships, while also providing a service that improves people’s quality of life. I love the art of dentistry, and even more, I love making people smile!</p>
+              <br/>
+              <h5>Educational Qualifications</h5>
+              <br/>
             </div>
             <hr/>
           </div>

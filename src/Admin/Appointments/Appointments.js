@@ -11,6 +11,9 @@ import {
 import { Link } from "react-router-dom";
 import AppNav from "../AppointmentNav/AppointmentNav";
 
+import { useAuth } from '../AuthContext/AuthContext'
+import { useNavigate } from 'react-router-dom';
+
 const Admin = (props) => {
   const [data, setData] = useState([]);
   const [value, setValue] = useState(0);
@@ -101,10 +104,26 @@ const Admin = (props) => {
     setSort(false);
   };
 
+// Log out button 
+
+  const { logout } = useAuth()
+  const navigate = useNavigate()
+
+  const logOut = async function(){
+    try{
+        await logout()
+        navigate("/login")
+    }
+    catch(error){
+        console.log("error :",error)
+    }
+}
+
   return (
     <div className="table-outer-container">
       <div className="emp-div-nav">
         <h1>Appointments</h1>
+        <button className="cancel-btn app-logout-btn-pos" onClick={logOut}>log out</button>
       </div>
       <div className="table-inner-container1">
         <div className="table-inner-container2">
