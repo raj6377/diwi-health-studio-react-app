@@ -50,7 +50,9 @@ export default function Home() {
 
         <Link to="/services" style={{textDecoration: "none"}}>
         <div className='service-card'>
-          <img src={general} alt="general-checkup"/>
+          <div>
+            <img src={general} alt="general-checkup"/>
+          </div>
           <br/>
           <br/>
           <h5> General</h5>
@@ -60,7 +62,9 @@ export default function Home() {
         </Link>
         <Link to='/services' style={{textDecoration: "none"}}>
           <div className='service-card'>
-            <img src={cosmetic} alt="cosmetic-treatment"/>
+            <div>
+              <img src={cosmetic} alt="cosmetic-treatment"/>
+            </div>
             <br/>
             <br/>
             <h5> Cosmetic</h5>
@@ -70,7 +74,9 @@ export default function Home() {
         </Link>
         <Link to='/services' style={{textDecoration: "none"}}>
           <div className='service-card'>
-            <img src={surgical} alt="surgical-treatment"/>
+            <div >
+              <img src={surgical} alt="surgical-treatment"/>
+            </div>
             <br/>
             <br/>
             <h5>Surgical</h5>

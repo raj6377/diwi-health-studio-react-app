@@ -12,6 +12,7 @@
 .footer div{
     font: 1.2em "Fira Sans", sans-serif;
     /* border: 2px solid rgb(5, 182, 49); */
+    overflow: hidden;
 }
 
 
@@ -52,4 +53,10 @@
 
 .map img{
     height: 35vh;
+}
+
+@media(max-height:600px){
+    .map img{
+        width: 30vw;
+    }
 }

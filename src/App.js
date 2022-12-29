@@ -38,7 +38,7 @@ function App() {
             <Route path='/About' element={<About/>}/>
             <Route path='/Book' element={<Book/>}/>
             <Route path='/Login' element={<Login setNavShow={setShowNav} statusNavShow={showNav}/>}/>
-            <Route path='/Dashboard' element={<Admin setNavShow={setShowNav} statusNavShow={showNav}/>}/>
+            <Route path='/Dashboard' element={<PrivateRoute><Admin setNavShow={setShowNav} statusNavShow={showNav}/></PrivateRoute>}/>
             <Route path='/Appointments' element={<PrivateRoute><Appointments setNavShow={setShowNav} statusNavShow={showNav}/></PrivateRoute>}/>
             <Route path='/AccAppointments' element={<PrivateRoute><AccAppointments setNavShow={setShowNav} statusNavShow={showNav}/></PrivateRoute>}/>
             <Route path='/PastAppointments' element={<PrivateRoute><PastAppointments setNavShow={setShowNav} statusNavShow={showNav}/></PrivateRoute>}/>

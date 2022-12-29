@@ -1,8 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import logo from '../Images/navbar/logo1.png'
-import { Link } from 'react-router-dom'
-import { useMatch, useResolvedPath} from 'react-router-dom'
+import { useMatch, useResolvedPath, Link} from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -28,7 +27,7 @@ export default function Navbar() {
             <CustomLink to='/Services'>Services</CustomLink>
             <CustomLink to='/Blog'>Blogs</CustomLink>
             <CustomLink to='/About'>About</CustomLink>
-            <CustomLink to='/Login'>Admin</CustomLink>
+            {/* <CustomLink to='/Login'>Admin</CustomLink> */}
             <CustomLink to='/Book' className='book' >Book Appointment</CustomLink>
         </ul>
     </nav>
