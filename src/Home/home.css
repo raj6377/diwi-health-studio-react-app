@@ -177,6 +177,18 @@ body{
 }
 
 @media (max-width:481px){
+    .services-brief .service-card:hover{
+        background-color: none;
+        box-shadow: none;
+        transform: none;
+        transform: none;
+        transition: all, .7s;
+    }
+    .services-tag-line{
+        font-size: 1.9rem;
+        margin-bottom: 2.5rem;
+        /* visibility: hidden; */
+    }
     .services-brief img{
         width: 50vw;
         height: auto;
@@ -187,38 +199,80 @@ body{
 .why-us{
     display: flex;
     justify-content:space-between;
-    gap: 5rem;
-    width: 100%;
-    padding:7rem;
+    gap: 2rem;
+    width: 100vw;
+    padding: 7rem;
     background-color: rgb(50, 100, 148);
-    /* border: 2rem solid red; */
+    border: 2px solid red;
 }
+
 
 .why-us img{
     height: 60vh;
     border-radius: 20%;
-    margin-right: 7rem;
-    /* border: 2rem solid black; */
+    margin-right: 5rem;
+    border: 2px solid black;
 }
 
-.why-us div{
-    margin-left: 7rem;
+.why-us-text{
+    width: 40vw;
+    min-width: 300px;
     padding: 1rem;
     padding-top: 0;
-    /* border: .2rem solid blue; */
+    border: .2rem solid blue;
 }
 
-.why-us h2{
+.why-us-text h2{
     color: rgba(255, 255, 255, 0.904);
     font-size: 4rem;
     font-style:oblique;
 }
 
-.why-us p{
+.why-us-text p{
     color: white;
     font-size: 1.5rem;
     font-style: oblique;
     text-align: justify;
+}
+
+@media (max-width:1024px){
+    .why-us{
+        padding: 3rem;
+        justify-content: space-evenly;
+    }
+    .why-us-text{
+        margin-left: 100px;
+    }
+    .why-us-text h2{
+        font-size: 2.5rem;
+    }
+    .why-us-text p{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:769px){
+    .why-us{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 0;
+    }
+    .why-us-text{
+        width: 70vw;
+        margin: auto;
+    }
+    
+    .why-us-pic{
+        display: none;
+    }
+}
+
+@media (max-width:481px){
+    .why-us-text{
+        max-width: 180px;
+    }
 }
 
 .testimonial-outer-div{

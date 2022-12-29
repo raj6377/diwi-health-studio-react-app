@@ -88,7 +88,8 @@ export default function Home() {
       </div>
 
       <div className='why-us'>
-        <div>
+
+        <div className='why-us-text'>
           <h2>Our Mission</h2>
           <br/>
           <p>Have to write something here. 
@@ -100,7 +101,10 @@ export default function Home() {
            
           </p>
         </div>
-        <img src={pic1} className="doc-pic" alt='doc-pic'/>
+
+        <div className='why-us-pic'>
+          <img src={pic1} className="doc-pic" alt='doc-pic'/>
+        </div>
       </div>
 
       <div className='testimonial-outer-div'>
