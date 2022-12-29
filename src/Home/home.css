@@ -4,6 +4,12 @@ body{
     background-color: white;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
 .bg-vid{
     width: 100vw;
     height: 88vh;
@@ -21,7 +27,7 @@ body{
     position: absolute;
     top: 35%;
     text-align: center;
-    font-size: clamp(1rem,5vw,2.5rem);
+    font-size: clamp(1rem,5vw,2rem);
     font-style: oblique;
     padding: 1rem;
     border-image: linear-gradient(10deg, rgb(114, 175, 233) , white) 1;
@@ -60,6 +66,7 @@ body{
     }
 }
 @media (max-width:770px){
+    .title{}
 
 }
 @media (max-width:480px){

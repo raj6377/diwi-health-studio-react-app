@@ -50,6 +50,7 @@ export default function Footer() {
 
           <div className='footer-services'>
             <h2>Services</h2>
+            <br/>
             <div>
               <ul>
                 <li>
@@ -70,12 +71,14 @@ export default function Footer() {
 
           <div className='contact-us'>
             <h2>Contact Us</h2>
+            <br/>
             <div>
               <h5>+916377483870</h5>
               <br/>
               <h5>diwi.healthstudio@gmail.com</h5>
               <br/>
               <h5>Shop No. 5, BG-6, Block BG 6,<br/> Paschim Vihar, New Delhi</h5>
+              <br/>
             </div>
           </div>
           <div className='map'>
