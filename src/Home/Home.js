@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import './home.css'
 import vid from './vid.mp4'
 import pic1 from '../Images/home/tools1.jpg'
@@ -16,17 +17,9 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Home() {
   
-  var testimonial = `It is new in the locality. Visited recently , got teeth scaling and polishing done.
-  It was quite a refreshing experience . Doctor was taking all the safety measures and was good communicator.
-  Had zero sensitivity after the treatment which is not common after scaling .
-  It also had some pretty advanced machines with Led and stuff don't know much about it , lol ....
-  but as far as I was concerned about scaling , it went great . Would recommend visiting ....`;
+  var slidesPerViewVar = 2;
 
-  if(testimonial.length>390){
-    testimonial = testimonial.substring(0,390)
-    testimonial += "......"
-  } 
-
+  
   return (
     <>
   
@@ -114,9 +107,8 @@ export default function Home() {
       </div>
 
       <hr/>
-      
       <Swiper
-        slidesPerView={3}
+        slidesPerView={window.innerWidth>1025 ? 3:window.innerWidth>770 ? 2:1}
         spaceBetween={40}
         autoHeight = {false}
         autoplay = {{

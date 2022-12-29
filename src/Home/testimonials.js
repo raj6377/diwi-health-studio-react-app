@@ -21,7 +21,7 @@ export const reviews = [
         context: `Dr. Pinky is an excellent dentist. 
         She took the time to explain every procedure she was doing. For example, when I got my teeth whitened, 
         Dr. Pinky was very supportive, and thorough when explaining the process. 
-        She is a professional and has a naturally lovely personality. `
+        She is a professional.`
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ export const reviews = [
         context: `No pain or problems with my extractions and 
         she goes above and beyond the call of duty to make sure you understand what you should do with your teeth 
         and mouth so you do not have future health risks. 
-        I found her to be very professional and truly caring about your oral health.`
+        I found her to be very professional.`
         
     },
     {

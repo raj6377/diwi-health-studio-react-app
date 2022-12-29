@@ -1,19 +1,12 @@
-*{
-    overflow-x: visible;
-}
+
 body{
     margin: 0;
     background-color: white;
-    overflow-x: visible;
 }
 
 .bg-vid{
-    margin: 0;
-    padding: 0;
     width: 100vw;
-    /* min-width: 50%; */
     height: 88vh;
-    /* min-height: 44vh; */
     position: absolute;
     top: 0%;
     z-index: -1; 
@@ -31,8 +24,8 @@ body{
     font-size: clamp(1rem,5vw,2.5rem);
     font-style: oblique;
     padding: 1rem;
-    /* border: .25rem solid rgb(238, 246, 248); */
     border-image: linear-gradient(10deg, rgb(114, 175, 233) , white) 1;
+    /* border: .25rem solid rgb(238, 246, 248); */
     border-width: clamp(0.1rem,10vw,.25rem);
     border-style: solid;
     cursor: pointer;
@@ -41,18 +34,44 @@ body{
 .title-color:hover{
     color: rgb(80, 162, 240);
 }
+
 .outer{
     display: grid;
     width: 100vw;
-    overflow-x:hidden;
-    border: 2px solid blue;
+    overflow-x: hidden;
+    /* border: 2px solid blue; */
 }
 
 .empty-div-after-title{
-    /* border: 2px solid red; */
     background-color: rgba(0, 0, 0, 0.322);
     position:static;
     height: 85vh;
+    /* border: 2px solid red; */
+}
+
+@media (max-width:1025px){
+    .empty-div-after-title{
+        height: 75vh;
+    }
+    .title{
+        top: 25%;
+        padding: .5rem;
+        width: 70vw;
+    }
+}
+@media (max-width:770px){
+
+}
+@media (max-width:480px){
+    .empty-div-after-title{
+        height: 55vh;
+    }
+    .title{
+        top: 25%;
+        padding: .5rem;
+        width: 70vw;
+    }
+
 }
 
 .services-brief{
@@ -129,7 +148,7 @@ body{
     font-size: 1.4rem;
 }
 
-@media (max-width:1024px){
+@media (max-width:1025px){
     .services-tag-line{
         font-size: 2.4rem;
         padding: 3rem 1rem 5rem 1rem;
@@ -146,7 +165,7 @@ body{
     }
 }
 
-@media (max-width:769px){
+@media (max-width:770px){
     .services-brief{
         display: flex;
         flex-direction: column;
@@ -185,12 +204,22 @@ body{
         transition: all, .7s;
     }
     .services-tag-line{
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         margin-bottom: 2.5rem;
         /* visibility: hidden; */
     }
     .services-brief img{
         width: 50vw;
+        height: auto;
+    }
+    .services-brief h5{
+        font-size: 1.5rem;
+    }
+    .services-brief p{
+        font-size: 1rem;
+    }
+    .services-brief img{
+        width: 35vw;
         height: auto;
     }
 }
@@ -203,7 +232,7 @@ body{
     width: 100vw;
     padding: 7rem;
     background-color: rgb(50, 100, 148);
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 
@@ -211,7 +240,7 @@ body{
     height: 60vh;
     border-radius: 20%;
     margin-right: 5rem;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .why-us-text{
@@ -219,7 +248,7 @@ body{
     min-width: 300px;
     padding: 1rem;
     padding-top: 0;
-    border: .2rem solid blue;
+    /* border: .2rem solid blue; */
 }
 
 .why-us-text h2{
@@ -235,7 +264,7 @@ body{
     text-align: justify;
 }
 
-@media (max-width:1024px){
+@media (max-width:1025px){
     .why-us{
         padding: 3rem;
         justify-content: space-evenly;
@@ -251,7 +280,7 @@ body{
     }
 }
 
-@media (max-width:769px){
+@media (max-width:770px){
     .why-us{
         display: flex;
         justify-content: center;
@@ -272,6 +301,12 @@ body{
 @media (max-width:481px){
     .why-us-text{
         max-width: 180px;
+    }
+    .why-us-text h2{
+        font-size: 1.8rem;
+    }
+    .why-us-text p{
+        font-size: 1rem;
     }
 }
 
@@ -317,7 +352,7 @@ body{
     width: 95vw;
     height: 60vh;
     /* height: auto; */
-  }
+}
 
 
   
@@ -401,4 +436,50 @@ body{
     padding: 0 2.4rem;
     text-align: justify;
     font-size: 1.25rem;
+}
+
+@media (max-width:1024px){
+    .name-rate i{
+        padding: 5px;
+    }
+    
+}
+
+@media (max-width:769px){
+    .testimonial-outer-div{
+        padding: 50px 0;
+    }
+    .testimonial-text h1{
+        font-size: 4.5rem;
+    }
+    
+}
+
+@media (max-width:481px){
+    .testimonial-outer-div{
+        padding: 50px 0;
+    }
+    .testimonial-text h1{
+        font-size: 2.5rem;
+    }
+    .testimonial-text h1{
+        font-size: 2.5rem;
+    }
+    .name-rate i{
+        padding: 2px;
+    }
+    .name-rate{
+        font-size: .85rem;
+    }
+    .swiper{
+        width: 90vw;
+        height: 50vh;
+        margin: 25px;
+    }
+    .testimonial-inner-div{
+        height: max-content;
+    }
+    .testimonial-lower p{
+        font-size: 1rem;
+    }
 }
