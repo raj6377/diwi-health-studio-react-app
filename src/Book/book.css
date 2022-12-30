@@ -161,14 +161,8 @@
 }
 
 .input-tag{
-    /* outline:brown; */
     height: 5vh;
     width: 160px;
-    /* box-shadow: 0 5px 20px 0 rgb(0, 0, 0); */
-    /* border-radius: 5%; */
-    /* border-color: 10px solid red; */
-    /* outline: 3px ridge rgba(43, 202, 176, 0.6); */
-    /* border-radius: 2rem; */
 }
 
 .purpose-text{
@@ -299,10 +293,11 @@
         height: 90vh;
         width: 35vw;
         min-width: max-content;
-        padding-top: 20px;
+        padding: 20px;
+        padding-bottom: 20px;
         height: max-content;
     }
-
+    
     .main-form-div:hover{
         box-shadow: none;
         transform: none;
@@ -318,25 +313,22 @@
     }
     
     .main-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        margin-top: 15px;
-        grid-template-columns: repeat( 4, 1fr );
-        gap: 20px;
-        width: max-content;
-        height: max-content;
-        z-index: 2;
         /* border: 2px solid yellow; */
-        margin-bottom: 20px;
-        padding-bottom: 2rem;
+        margin: 0;
+        padding: 0;
+        height: max-content;
+        width: max-content;
+        grid-template-columns: 60px 60px;
+        gap: 32px;
     }
     
     .purpose-text{
-        width: 160px;
-        height: 10vh;
+        position: relative;
+        left: 60%;
+    }
+    .input-tag{
+        height: 4vh;
+        width: 120px;
     }
 }
 
@@ -441,6 +433,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     width: 160px;
     color: black;
     padding-top: 5px;
+
 }
 
 .date-time-tags{

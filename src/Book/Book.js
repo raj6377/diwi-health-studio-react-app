@@ -126,11 +126,11 @@ export default function Book() {
                   </div>
                   <div className='form-column-div date-time-tags'>
                     <input type='date' placeholder=' Date' onClick={init} pattern="^(0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])[- /.] (19|20)\d\d$"className='input-tag' id='dateTag' onChange={(event) => setDate(event.target.value)}/>
-                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newDate==="null")? "Date":newDate}</div>
+                    <div className="emp-time-date-div" style={{fontSize:`${window.innerWidth>480 ? "1.12rem":"1rem"}`,fontWeight:"100"}}>{window.innerWidth>480 && <>&emsp;&emsp;&emsp;&emsp;</>}{(newDate==="null")? " Date":newDate}</div>
                   </div>
                   <div className='form-column-div date-time-tags'>
                     <input type='time' placeholder=' Time' className='input-tag' min="09:00" max="20:00" id='timeTag' onChange={(event) => setTime(event.target.value)}/>
-                    <div className="emp-time-date-div" style={{fontSize:"1.12rem",fontWeight:"100"}}>&emsp;&emsp;&emsp;&emsp;{(newTime==="null")? "Time":newTime}</div>
+                    <div className="emp-time-date-div" style={{fontSize:`${window.innerWidth>480 ? "1.12rem":"1rem"}`,fontWeight:"100"}}> {window.innerWidth>480 && <>&emsp;&emsp;&emsp;&emsp;</>}{(newTime==="null")? " Time":newTime}</div>
                   </div>
                   <div className='form-column-div'>
                     <textarea type='text' placeholder=' Purpose' className='input-tag purpose-text' onChange={(event) => setPurpose(event.target.value)}/>
