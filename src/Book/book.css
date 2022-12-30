@@ -260,9 +260,11 @@
     }
     .emp-div1 div.exc-care{
         -webkit-text-stroke: 0.5px white;
+        background-position: -245px 0;
     }
     .emp-div1 div.all-ages{
         -webkit-text-stroke: 0.5px white;
+        background-position: -225px 0;
     }
     .main-form-div h3{
         padding: 10px;
@@ -283,10 +285,11 @@
     }
     .emp-div1 div.exc-care{
         -webkit-text-stroke: 0.5px white;
-        background-position: -225px 0;
+        background-position: -245px 0;
     }
     .emp-div1 div.all-ages{
         -webkit-text-stroke: 0.5px white;
+        background-position: -225px 0;
     }
     
     .main-form-div{
