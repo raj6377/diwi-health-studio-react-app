@@ -59,11 +59,11 @@
 }
 
 .first-serv-div{
-    margin-top: 10rem;
+    margin-top: 7rem;
 }
 
 .last-serv-div{
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
 }
 
 /* ***************************showcase content************************** */
@@ -244,6 +244,13 @@
     .service-main-img{
         height: 50vh;
     }
+    .first-serv-div{
+        margin-top: 3rem;
+    }
+    
+    .last-serv-div{
+        margin-bottom: 2rem;
+    }
     
 }
 @media (max-width:480px){
@@ -265,6 +272,6 @@
     }
     
     .last-serv-div{
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
     }
 }

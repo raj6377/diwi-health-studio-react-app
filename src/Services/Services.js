@@ -22,12 +22,12 @@ export default function Services() {
               services.map((currServ)=>{
               var isFirst = false;
               var isLast = false;
-              if(currServ.id===1){
+              if(currServ.id===101){
                 isFirst= true
               }else{
                   isFirst = false
                 }
-              if(currServ.id===3){
+              if(currServ.id===103){
                 isLast=true
               }else{
                 isLast = false
