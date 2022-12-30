@@ -14,7 +14,7 @@ export default function Services() {
     <div>
       <div className='emp-div-for-bg'> 
         <img src={bg}/>
-        <button className="book-now" onClick={()=> navigate('/book')}>Book Now</button>
+          <button className="book-now" onClick={()=> navigate('/book')}>Book Now</button>
       </div>
       
       <div className='serv-div-outer'>
