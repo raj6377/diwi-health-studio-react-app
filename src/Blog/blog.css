@@ -13,14 +13,15 @@ body{
 
 
 .bg-img{
-    width: 98.5vw;
+    width: 100vw;
     height: 80vh;
     top: 0%;
     overflow: hidden;
+    border: 2px solid red;
 }
 
 .bg-img img{
-    width: 98.5vw;
+    width: 100vw;
     height: 80vh;
     filter: brightness(80%);
     object-fit:cover;
@@ -88,9 +89,11 @@ body{
         #3b413dc5 10px,
         transparent 10px,
         white 6px
-    ); */
-    background-size: 430px 1px;
+        ); */
+        background-size: 430px 1px;
 }
+
+
 
 
 /* ************** Single blog css ******************* */
@@ -152,7 +155,7 @@ body{
     color:rgb(8, 17, 27);
   }
   .input-search::placeholder{
-    color:rgb(8, 17, 27);
+      color:rgb(8, 17, 27);
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -188,3 +191,64 @@ body{
   }
   
   
+@media (max-width:1025px){
+    .blog-head{
+        font: small-caps bold 4.5rem/1 sans-serif;
+        letter-spacing: 2.5rem;
+    }
+    
+}
+@media (max-width:770px){
+    .search-box{
+        left: 30%;
+    }
+    .blog-head{
+        left: 18%;
+        font: small-caps bold 4.5rem/1 sans-serif;
+        letter-spacing: 2rem ;
+    }
+    
+}
+@media (max-width:480px){
+    .single-blog-inner-div h1{
+        font-size: 1.5rem;
+    }
+    .single-blog-inner-div h3{
+        font-size: 1rem;
+    }
+    .blog-cards{
+        background-color: #326594;
+        padding: 40px;
+        font-size: .7rem;
+    }
+    .blog-cards div{
+        background-color: white;
+        width: 200px;
+        height: max-content;
+        overflow: hidden;
+        padding: 20px 30px;
+        gap: 0px;
+        margin: 20px auto;
+        /* border: .5px solid red; */
+        box-shadow: 0 7px 20px 0 rgb(0, 0, 0);
+    }
+    .blog-cards img{
+        width: 100px;
+        height: 100px;
+        border-radius: 5%;
+    }
+    .search-box{
+        left: 10%;
+    }
+    .blog-head{
+        left: 22%;
+        top: 36%;
+        font: small-caps bold 2.5rem/1 sans-serif;
+        letter-spacing: 1.5rem ;
+    }
+    
+    .bg-img{
+        height: 50vh;
+    }
+    
+}

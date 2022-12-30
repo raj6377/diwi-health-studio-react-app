@@ -36,7 +36,7 @@ export default function Blog() {
   return (
     <div className="main-blog-div">
       <div className="bg-img">
-        <img className="bg-img" src={bgImg} />
+        <img src={bgImg} />
       </div>
       <h2 className="blog-head">Blogs</h2>
 
