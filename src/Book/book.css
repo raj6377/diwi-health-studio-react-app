@@ -10,7 +10,7 @@
 
 .bg{
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     object-fit:fill;
     z-index: -1;
@@ -20,7 +20,7 @@
 
 .bg img{
     position: absolute;
-    width: 99vw;
+    width: 100vw;
     height: 80vh;
     object-fit:cover;
     /* border: 2px solid rgb(62, 255, 3); */
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     font: small-caps bold 1.5rem/1 sans-serif;
-    /* border: 2px solid rgb(62, 255, 3); */
+    /* border: 2px solid rgb(238, 255, 3); */
 }
 
 .emp-div1 div.exc-care{
@@ -56,7 +56,7 @@
     background-clip: text;
     background-position: -425px 0;
     animation: backcolor1 3.5s linear infinite alternate;
-    /* border: 2px solid rgb(62, 255, 3); */
+    /* border: 2px solid rgb(238, 255, 3); */
 }
 
 @keyframes backcolor1{
@@ -76,7 +76,7 @@
     background-clip: text;
     background-position: -325px 0;
     animation: backcolor2 3.5s linear infinite alternate;
-    /* border: 2px solid rgb(62, 255, 3); */
+    /* border: 2px solid rgb(255, 196, 3); */
 }
 
 @keyframes backcolor2{
@@ -99,6 +99,7 @@
     margin-bottom: 8vw;
     height: 90vh;
     width: 35vw;
+    min-width: max-content;
     background: #45afe0;
     display: flex;
     justify-content: center;
@@ -108,7 +109,8 @@
     padding-top: 60px;
     border-radius:  5%; 
     box-shadow: 0 5px 10px 0 rgb(0, 0, 0);
-    /* border: 2px solid green; */
+    /* border: 2px solid rgb(255, 6, 6); */
+    font-family: "Jost", sans-serif;
     transition: all, .7s;
 }
 
@@ -145,19 +147,11 @@
     display: flex;
     justify-items: center;
     align-items: center;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(9, 255, 0); */
 }
 
 .submit-button-div button{
     margin: auto;
-}
-
-.submit-button button{
-    margin: auto;
-    height: 7vh;
-    width: 10vw;
-    margin-top: 0;
-    border-radius: 20%;
 }
 
 .submit-button button:hover{
@@ -200,12 +194,13 @@
 .side-img img{
     box-sizing: border-box;
     overflow: hidden;
+    /* border: 2px solid goldenrod; */
 }
 
 
 /* cicle in absolute position */
 .outer-rad{
-    z-index: 3;
+    z-index: -55;
     position: absolute;
     top: 90vh;
     right: -38%;
@@ -216,14 +211,132 @@
     align-items: center;
     justify-content:  center;
     border-radius: 50%;
-    z-index: 0;
-  }
+    /* z-index: 0; */
+    /* border: 2px solid rebeccapurple; */
+}
   .inner-rad{
+    position: absolute;
     background-color: white;
     height: 600px;
     width: 600px;
     border-radius: 50%;
+    /* border: 2px solid royalblue; */
   }
+
+  /* **************** Media Queries ******************* */
+  @media (max-width:1025px){
+    .main-form-div{
+        width: 50vw;
+    }
+    .inner1{
+        justify-content: center;
+    }
+    .bg{
+        height: 60vh;
+    }
+    .bg img{
+        height: 60vh;
+    }
+    .emp-div1{
+        height: 60vh;
+    }
+    .emp-div1 div.emp-title{
+        left: 55%;
+        top: 45%;
+        font: small-caps bold 1rem sans-serif;
+    }
+    .side-img{
+        display: none;
+    }
+    .main-form-div h3{
+        padding: 10px;
+    }
+}
+@media (max-width:770px){
+    .emp-div1 div.emp-title{
+        left: 55%;
+        top: 65%;
+        font: small-caps bold 0.7rem sans-serif;
+    }
+    .emp-div1 div.exc-care{
+        -webkit-text-stroke: 0.5px white;
+    }
+    .emp-div1 div.all-ages{
+        -webkit-text-stroke: 0.5px white;
+    }
+    .main-form-div h3{
+        padding: 10px;
+    }
+    .main-form-div{
+        margin-left: 0;
+        padding-top: 20px;
+    }
+    .main-form{
+        padding: 2px;
+    }
+}
+@media (max-width:480px){
+    .emp-div1 div.emp-title{
+        left: 28%;
+        top: 65%;
+        font-size: 0.9rem;
+    }
+    .emp-div1 div.exc-care{
+        -webkit-text-stroke: 0.5px white;
+        background-position: -225px 0;
+    }
+    .emp-div1 div.all-ages{
+        -webkit-text-stroke: 0.5px white;
+    }
+    
+    .main-form-div{
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-bottom: 20vw;
+        height: 90vh;
+        width: 35vw;
+        min-width: max-content;
+        padding-top: 20px;
+        height: max-content;
+    }
+
+    .main-form-div:hover{
+        box-shadow: none;
+        transform: none;
+        transform: none;
+    }
+    
+    .mendate-info{
+        padding: 20px;
+        min-width: 100px;
+        height: max-content;
+        font-size: 1rem;
+        /* border: 2px solid red; */
+    }
+    
+    .main-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 15px;
+        grid-template-columns: repeat( 4, 1fr );
+        gap: 20px;
+        width: max-content;
+        height: max-content;
+        z-index: 2;
+        /* border: 2px solid yellow; */
+        margin-bottom: 20px;
+        padding-bottom: 2rem;
+    }
+    
+    .purpose-text{
+        width: 160px;
+        height: 10vh;
+    }
+}
+
 
 /* ************ POP UP ****************** */
 

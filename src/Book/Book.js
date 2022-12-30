@@ -71,30 +71,37 @@ export default function Book() {
   
   return (
     <>
-    <div className='bg'><img src={bgImg}  /></div>
+    <div className='bg'><img src={bgImg}  alt='bg-img'/></div>
     <div className='outer1'>
 
-      <div className="outer-rad">
-        <div className="inner-rad"/>
-      </div>
+        <div className="outer-rad">
+          <div className="inner-rad"/>
+        </div>
 
         <div className='emp-div1'>
 
-          <div className='emp-title'>
-            <div className='exc-care'>
-              <h1>Exceptional Care </h1>
+            <div className='emp-title'>
+              <div className='exc-care'>
+                <h1>Exceptional Care </h1>
+              </div>
+              <div className='all-ages'>
+              <h1>For All Ages</h1>
+              </div>
             </div>
-            <div className='all-ages'>
-            <h1>For All Ages</h1>
-            </div>
-          </div>
 
         </div>
-          <PopUp trigger={sMsg} setTrigger={setsMsg}><h3>Appointment Booked Successfully!!</h3></PopUp>
-          <div className='inner1'>
+
+        <PopUp trigger={sMsg} setTrigger={setsMsg}><h3>Appointment Booked Successfully!!</h3></PopUp>
+
+        <div className='inner1'>
               <div className='main-form-div'>
-            <h3 >Name, Age and phone number are mendatory to fill.</h3>
+
+                <div className="mendate-info">
+                  <h3 >Name, Age and phone number {window.innerWidth<480 && <br/>}are mendatory to fill.</h3>
+                </div>
+
                 <form className='main-form' onSubmit={createAppointment}>
+
                   <div className='form-column-div'>
                     <input type='text' placeholder=' Patient Name' className='input-tag' onChange={(event) => setName(event.target.value)} required/>
                   </div>
@@ -131,12 +138,13 @@ export default function Book() {
                   <div className='submit-button-div'>
                     <button className='logIn-btn' id="my-form" > Submit </button>
                   </div>
+
                 </form>
 
               </div>
 
               <div className='side-img'>
-                <img src={smileImg} className='smileImg' /> 
+                <img src={smileImg} className='smileImg' alt='doc-img'/> 
               </div>
 
           </div>
