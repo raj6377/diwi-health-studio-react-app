@@ -59,7 +59,7 @@ export default function Blog() {
         {users &&
           users
             .filter((item) => {
-              if (searchTerm == "") {
+              if (searchTerm === "") {
                 return item;
               } else if (
                 item.Title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -74,7 +74,7 @@ export default function Blog() {
                     style={{ color: "BLACK" ,textDecoration: "none"}}
                     to={`/SingleBlog/${item.id}`}
                   >
-                    <img src={item.img} />
+                    <img src={item.img} alt='blog-img'/>
                     <h2>{item.Title}</h2>
                   </Link>
                 </div>

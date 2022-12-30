@@ -14,7 +14,7 @@ const About = ()=>{
     <div className="whole-about-us">
         <div className='bg-about'><img src={pic1}  /></div>
 
-        <div className='emp-div-about'>
+        <div className='animation-div-about'>
 
           <div className='emp-title'>
             <div className='exc-care'>

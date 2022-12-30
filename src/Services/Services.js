@@ -1,4 +1,4 @@
-import React , { useState }from 'react'
+import React from 'react'
 import { services } from './api'
 import './Services.css'
 import Display from './Showcase'
@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <div>
       <div className='emp-div-for-bg'> 
-        <img src={bg}/>
+        <img src={bg} alt='bg-img'/>
           <button className="book-now" onClick={()=> navigate('/book')}>Book Now</button>
       </div>
       

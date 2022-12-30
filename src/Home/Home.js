@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import './home.css'
 import vid from './vid.mp4'
 import pic1 from '../Images/home/tools1.jpg'
@@ -16,10 +15,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Home() {
-  
-  var slidesPerViewVar = 2;
 
-  
   return (
     <>
   
@@ -137,7 +133,7 @@ export default function Home() {
                 <div className="testimonial-upper">
                   <div className="pic-name-rate">
                     <div className="testimonial-pic">
-                      <img src={currReview.img} />
+                      <img src={currReview.img} alt='dp'/>
                     </div>
                     <div className="name-rate">
                       <h2>

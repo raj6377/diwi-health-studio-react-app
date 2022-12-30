@@ -1,8 +1,7 @@
 .bg-about{
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 80vh;
-    object-fit:fill;
     z-index: -1;
     overflow: hidden;
     /* border: 2px solid rgb(62, 255, 3); */
@@ -10,24 +9,20 @@
 
 .bg-about img{
     position: absolute;
-    width: 99vw;
+    width: 100vw;
     height: 80vh;
     object-fit:cover;
     filter: brightness(70%);
     /* border: 2px solid rgb(62, 255, 3); */
 }
 
-
-
-
-.emp-div-about{
-    height: 91vh;
-    width: 99vw;
+.animation-div-about{
+    width: 100vw;
+    height: 80vh;
     /* border: 2px solid blue; */
 }
 
-
-.emp-div-about div.emp-title{
+.animation-div-about div.emp-title{
     height: max-content;
     width: max-content;
     position: relative;
@@ -40,7 +35,7 @@
     /* border: 2px solid rgb(62, 255, 3); */
 }
 
-.emp-div-about div.exc-care{
+.animation-div-about div.exc-care{
     -webkit-text-stroke: 1px white;
     color: transparent;
     background-image: conic-gradient(#fff,white);
@@ -58,7 +53,7 @@
     }
 }
 
-.emp-div-about div.all-ages{
+.animation-div-about div.all-ages{
     width: max-content;
     margin: auto;
     -webkit-text-stroke: 1px white;
@@ -79,6 +74,7 @@
 }
 
 .about-us-main{
+    width: 100vw;
     display: flex;
     justify-content:center;
     gap: 200px;
@@ -95,6 +91,7 @@
     font-size: 1.5rem;
     width: 500px;
     height: max-content;
+    /* border: 2px solid blue; */
 }
 
 .about-doc hr{
@@ -103,11 +100,78 @@
 
 .about-doc-context{
     padding: 10px 50px;
+    /* border: 2px solid gold; */
 }
 
 .doc-name{
     font: small-caps bold 2rem/1 sans-serif;
 }
 
+@media(max-width:1025px){
+    .about-us-main{
+        gap: 50px;
+        padding: 80px;
+    }
+    .about-us-main img{
+        width: 350px;
+    }
+    .about-doc{
+        width: 70vw;
+        min-width: 300px;
+    }
+    .about-doc hr{
+        border: 2px solid grey;
+    }
+    .doc-name{
+        font: small-caps bold 1.6rem/1 sans-serif;
+    }
+    .about-doc-context{
+        padding: 20px;
+    }
+    .about-doc h5{
+        font-size: 1.3rem;
+    }
+    .about-doc p{
+        font-size: 1.1rem;
+    }
+}
+@media(max-width:770px){
+    .about-us-main{
+        display: grid;
+        justify-content: center;
+    }
+    .about-us-main img{
+        width: 250px;
+    }
+    .about-doc{
+        width: 70vw;
+        min-width: 300px;
+    }
+    .bg-about img{
+        height: 50vh;
+    }
+}
+@media(max-width:480px){
+    .bg-about img{
+        height: 40vh;
+    }
+    .animation-div-about{
+        height: 40vh;
+        /* border: 2px solid red; */
+    }
+    .animation-div-about div.emp-title{
+        font-size: 0.9rem;
+        top: 55%;
+        width: max-content;
+        /* border: 2px solid blue; */
+    }
+    .animation-div-about div.all-ages{
+        -webkit-text-stroke: 0.5px white;
+        background-position: -225px 0;
+    }
+    .animation-div-about div.exc-care{
+        -webkit-text-stroke: 0.5px white;
+    }
 
+}
 

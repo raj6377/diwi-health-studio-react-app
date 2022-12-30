@@ -29,7 +29,7 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href='#'>
+                <a href='https://instagram.com/diwi_health_studio' target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d= {instaSvgPath}/>
                 </svg>
@@ -84,7 +84,7 @@ export default function Footer() {
           <div className='map'>
             <h2>Location</h2>
             <br/>
-            <a href={location}  target="_blank"><img src={locImg}/></a>
+            <a href={location}  target="_blank"><img src={locImg} alt='location-pic'/></a>
           </div>
         </div>
     </>
