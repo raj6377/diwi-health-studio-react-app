@@ -81,7 +81,9 @@ export default function Home() {
         <div className='why-us-text'>
           <h2>Our Mission</h2>
           <br/>
-          <p>We exist to make your smile brighter and shinier. Our mission is to provide most affordable dental care to those most in need.
+          <p>Diwi health studio seeks to grow lifelong relationships with our patients while delivering
+            quality and compassionate dental care with individualized service, unlike any other.
+            We exist to make your smile brighter and shinier. Our mission is to provide most affordable dental care to those most in need.
            
           </p>
         </div>
