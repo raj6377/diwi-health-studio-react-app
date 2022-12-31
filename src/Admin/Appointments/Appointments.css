@@ -27,10 +27,7 @@
   color: white;
   width: 1365px;
   height: 15vh;
-<<<<<<< HEAD
-=======
   /* border: 2px solid blue; */
->>>>>>> b394873ca37456b4c0b177bd4791de3c51204901
   background-color: #008678;
   /* border: 2px solid blue; */
 }
@@ -38,18 +35,15 @@
 .table-inner-container1 {
   width: max-content;
   height: max-content;
-<<<<<<< HEAD
   margin: 5rem auto;
   /* box-shadow: 0 2px 10px 0 rgb(0, 0, 0); */
   /* border-bottom: 4px solid #008678; */
   border: 2px solid #008678;
   /* float: right; */
-=======
   margin: 10rem 0;
   box-shadow: 0 2px 10px 0 rgb(0, 0, 0);
   border-bottom: 4px solid #008678;
   /* border: 2px solid green; */
->>>>>>> b394873ca37456b4c0b177bd4791de3c51204901
 }
 
 .table-inner-container2 {
@@ -65,11 +59,6 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-<<<<<<< HEAD
-  /* border: 2px solid rgb(238, 255, 0); */
-=======
-  /* border: 2px solid rgb(156, 133, 2); */
->>>>>>> b394873ca37456b4c0b177bd4791de3c51204901
 }
 
 .table-content {
@@ -78,12 +67,6 @@
   height: max-content;
   border-collapse: collapse;
   cursor: default;
-<<<<<<< HEAD
-  font-size: 1rem;
-  /* border: 2px solid rgb(0, 255, 0); */
-=======
-  /* border: 2px solid rgb(1, 44, 1); */
->>>>>>> b394873ca37456b4c0b177bd4791de3c51204901
 }
 
 .thead-dark {
@@ -233,13 +216,10 @@ td {
   text-decoration: none;
   display: flex;
   color: black;
-<<<<<<< HEAD
   /* outline: 10px solid #008678; */
   width: 952px;
-=======
   /* border: 10px solid yellow; */
   width: 70vw;
->>>>>>> b394873ca37456b4c0b177bd4791de3c51204901
   min-width: max-content;
   justify-content: space-between;
   align-items: center;
