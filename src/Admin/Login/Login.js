@@ -1,13 +1,10 @@
 import "./login.css";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import bg from "../../Images/dashboard/bg.jpg";
 import log from "../../Images/navbar/logo1.png";
 import GoToTop from "../../GoToTop";
 
-import { auth } from "../../Firebase-config/Firebase-config";
 import { useRef } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../AuthContext/AuthContext";
@@ -56,7 +53,7 @@ const Login = (props) => {
             ></input>
           </div>
           <div className="logIn-buttons">
-            <button disabled={loading} className="logIn-btn">
+            <button disabled={loading} className="logIn-btn logIn-btn-size">
               Log In
             </button>
           </div>

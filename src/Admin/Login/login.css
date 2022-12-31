@@ -18,6 +18,8 @@
     font-family: "Jost", sans-serif;
     font-size: 1.25rem;
     width: 50vw;
+    min-width: max-content;
+    padding: 0 50px;
     height:max-content;
     /* border: 1px solid #ff2057; */
     border-radius: 7%;
@@ -47,6 +49,22 @@
 .logIn-buttons button{
     margin-bottom: 40px;
     margin-left: 75px;
+}
+
+@media(max-width:480px){
+    .logIn-inner-div img{
+        padding-left: 70px;
+        margin-top: 40px;
+    }
+    .user-pass-field input{
+        height: 20px;
+        font-size: 1rem;
+        color : #ff2057;
+    }
+    .logIn-buttons button{
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
 }
 
 .logIn-btn {

@@ -271,6 +271,7 @@
         padding: 2px;
     }
 }
+
 @media (max-width:480px){
     .emp-div1 div.emp-title{
         left: 28%;
