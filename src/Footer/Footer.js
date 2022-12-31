@@ -19,7 +19,7 @@ export default function Footer() {
 
             <ul>
               <li>
-                <a href='#'> 
+                <a href='https://www.facebook.com/profile.php?id=100079777103352&mibextid=ZbWKwL' target="_blank"> 
                 <svg xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 448 512">
                 <path d={fbSvgPath}/>
@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href='#'>
+                <a href='https://www.linkedin.com/in/dr-pinky-rajpurohit-39b211210' target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d={linkedInSvgPath}/>
                 </svg>

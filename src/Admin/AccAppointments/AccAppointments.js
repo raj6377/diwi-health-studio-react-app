@@ -119,26 +119,27 @@ export default function AccAppointments(props) {
           <h1>Appointments</h1>
           <button className="cancel-btn app-logout-btn-pos" onClick={logOut}>log out</button>
         </div>
+
+        <div className="dropdown-outer">
+          <label>Sort By:</label>
+          <select className="dropdown" name="colValue" onChange={handleChange}>
+            <option>Please Select</option>
+            <option value="Name">Name</option>
+            <option value="TimeRequested">Time Requested</option>
+            <option value="DateRequested">Date Requested</option>
+          </select>
+          <button className="submit-btn select-reset-btn" onClick={handleReset}>
+            Reset
+          </button>
+        </div>
+
         <div className="table-inner-container1">
+          
           <div className="table-inner-container2">
             <div className="table-heading">
               <h1>{<AppNav />}</h1>
             </div>
-            <label>Sort By:</label>
-            <select
-              className="dropdown"
-              name="colValue"
-              onChange={handleChange}
-            >
-              <option>Please Select</option>
-              <option value="Name">Name</option>
-              <option value="TimeRequested">Time Requested</option>
-              <option value="DateRequested">Date Requested</option>
-            </select>
-            <button className="btn btn-dark" onClick={handleReset}>
-              Reset
-            </button>
-            <br />
+            
             <table className="table-content">
               <thead className="thead-dark">
                 <tr>

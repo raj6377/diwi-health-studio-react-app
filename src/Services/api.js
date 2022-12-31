@@ -22,12 +22,6 @@ const genSub = [
         treatment options will keep your mouth healty`
     },
     {
-        id:4,
-        service:"Botox for TMJ,head, & facial pain",
-        content:`Beyond aesthetic improvements, Botox treats common dental
-        concerns like jaw pain, headaches, migraines, and clenching.`
-    },
-    {
         id:5,
         service:"Dentures",
         content:`Replace missing teeth! Fully and partial dentures created with top-of-the-line
@@ -39,9 +33,6 @@ const genSub = [
         content:`Stop grinding your teeth at night and protect your teeth
          during sports with a custom-made-mouthguard.`
     },
-]
-
-const cosSub = [
     {
         id:7,
         service:"Invisalign",
@@ -60,17 +51,68 @@ const cosSub = [
         content:`Thin, custom-made shells that fit aroung your teeth to improve their 
         appearance. Usually made of porcelain or resin, veneers change the shape, color, length, or size of your teeth.`
     },
+]
+
+const cosSub = [
     {
-        id: 10,
-        service:"Cosmetic Bonding",
-        content:`Made from natural tooth-colored materials, bonding covers up 
-        and eliminates imperfections like chips, cracks, stains and gaps.`
+        id:18,
+        service:"Microdermabrasion",
+        content:`It can exfoliate the skin, reduce signs of aging, and make the skin appear more even.
+        the procedure is safe for all skiin types.`
     },
     {
-        id:11,
-        service:"Botox",
-        content:"Reduces wrinkles and other signs of aging and treats TMJ, head, and facial pain."
-    }
+        id:19,
+        service:"Derma Peels",
+        content:`Lightens the skin by removing dull skin and revealing healthier tissue. Reduces irregular
+        skintone caused by sun damage, hyper-pigmantation and melasma.`
+    },
+    {
+        id:20,
+        service:"Skin Whitening Treatment",
+        content:`Glutathione is very useful for the human body as it is an antiovidant that is present in the 
+        human cells. it works by neutralizing free radicals, boosting immunity and also helps in the detoxification of the body.`
+    },
+    {
+        id:21,
+        service:"Pigmentation Treatment",
+        content:`Hyperpigmentation refers to patches of skin that become darker than the surrounding areas of skin.
+        It occurs when the skin produces excess melanin, the pigment that gives skin its color. It can affect people of all skin types.`
+    },
+    {
+        id:22,
+        service:"PRP Therapy",
+        content:`It help support wound healing in trauma and joint injury. The technique can adddress
+        male pattern baldness, stimulate the growth of hair transplants and enhance other cosmetic procedures.`
+    },
+    {
+        id:23,
+        service:"Laser Hair Removal",
+        content:`Laser hair removal is a medical procedure that uses a concentrated beam of light (laser)
+        to remove unwanted hair.`
+    },
+    {
+        id:24,
+        service:"Mole, Tag and warts removal",
+        content:`The CO2 laser and a scalpel is used to cut the skin in a circular fashion around the wart.
+        `
+    },
+    {
+        id:25,
+        service:"Photo facial",
+        content:`Photo facial using IPL therapy can help treat Enlarged pores and acne, small blood vessels visible on the face,
+        sun spots, pigmentation irregularities and skin redness.`
+    },
+    {
+        id:26,
+        service:"Permanent eyebrow color",
+        content:`Makes the eyebrow texture and shape more visible and splendid. Also helps make eyebrows symmetrical.`
+    },
+    {
+        id:27,
+        service:"Laser tattoo removal",
+        content:`Laser can be used to remove a tattoo with a US FDA approved equipment, and to completely
+        eliminate the tattoo ink remnants from the skin to restore the skin in its original glory.`
+    },
 ]
 
 const serSub = [
@@ -126,7 +168,7 @@ export const services = [
     {
         id:103,
         image: serImage,
-        name: "Sergical",
+        name: "Surgical",
         subServices: serSub
     }
 

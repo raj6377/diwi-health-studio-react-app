@@ -125,12 +125,8 @@ const Admin = (props) => {
         <h1>Appointments</h1>
         <button className="cancel-btn app-logout-btn-pos" onClick={logOut}>log out</button>
       </div>
-      <div className="table-inner-container1">
-        <div className="table-inner-container2">
-          <div className="table-heading">
-            <h1>{<AppNav />}</h1>
-          </div>
-
+        <br/>
+        <div className="dropdown-outer">
           <label>Sort By:</label>
           <select className="dropdown" name="colValue" onChange={handleChange}>
             <option>Please Select</option>
@@ -138,10 +134,17 @@ const Admin = (props) => {
             <option value="TimeRequested">Time Requested</option>
             <option value="DateRequested">Date Requested</option>
           </select>
-          <button className="btn btn-reset" onClick={handleReset}>
+          <button className="submit-btn select-reset-btn" onClick={handleReset}>
             Reset
           </button>
-          <br />
+        </div>
+      <div className="table-inner-container1">
+        <div className="table-inner-container2">
+          <div className="table-heading">
+            <h1>{<AppNav />}</h1>
+          </div>
+
+          {/* <br /> */}
           <table className="table-content">
             <thead className="thead-dark">
               <tr>

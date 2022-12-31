@@ -38,9 +38,15 @@ const About = ()=>{
               <br/>
               <h5>Why dentistry ?</h5>
               <br/>
-              <p>Dentistry has always been dear to me, as I was exposed to it at a very young age watching my grandfather treat patients in rural Oklahoma. Dentistry offers the unique opportunity to build lifelong relationships, while also providing a service that improves people’s quality of life. I love the art of dentistry, and even more, I love making people smile!</p>
+              <p>Dental treatment really can help people. A successful root treatment or filling
+                can help to remove pain; a denture may help people eat foods they may previously have struggled with.
+                Dentists help people's health through treating gum disease, dental caries and related pathology.
+                This can in turn improve their quality life.
+              </p>
               <br/>
               <h5>Educational Qualifications</h5>
+              <br/>
+              <p>Bachelor of Dental Surgery.<br/> Fellowship in Aesthetic Dentistry.<br/> PG Diploma in Clinical Cosmetology.(PGDCC)</p>
               <br/>
             </div>
             <hr/>

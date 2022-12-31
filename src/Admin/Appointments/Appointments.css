@@ -5,13 +5,16 @@
   padding: 0;
 }
 
+
 .table-outer-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 98.5vw;
+  width:1360px;
+  min-width: max-content;
   height: max-content;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .emp-div-nav {
@@ -22,19 +25,20 @@
   justify-content: center;
   align-items: center;
   color: white;
-  width: 100vw;
+  width: 1365px;
   height: 15vh;
-  border: 2px solid blue;
   background-color: #008678;
+  /* border: 2px solid blue; */
 }
 
 .table-inner-container1 {
   width: max-content;
   height: max-content;
-  margin: 10rem 0;
+  margin: 5rem auto;
   /* box-shadow: 0 2px 10px 0 rgb(0, 0, 0); */
-  border-bottom: 4px solid #008678;
-  border: 2px solid green;
+  /* border-bottom: 4px solid #008678; */
+  border: 2px solid #008678;
+  /* float: right; */
 }
 
 .table-inner-container2 {
@@ -42,7 +46,7 @@
   font-size: 1.05rem;
   width: max-content;
   height: max-content;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .table-heading {
@@ -50,7 +54,7 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-  border: 2px solid rgb(156, 133, 2);
+  /* border: 2px solid rgb(238, 255, 0); */
 }
 
 .table-content {
@@ -59,7 +63,8 @@
   height: max-content;
   border-collapse: collapse;
   cursor: default;
-  border: 2px solid rgb(1, 44, 1);
+  font-size: 1rem;
+  /* border: 2px solid rgb(0, 255, 0); */
 }
 
 .thead-dark {
@@ -69,6 +74,7 @@
   color: white;
   padding: 10px;
   margin: 10px;
+  /* border: 2px solid rgb(0, 255, 221); */
 }
 
 th,
@@ -106,6 +112,11 @@ td {
 
 .even-row {
   background-color: rgb(211, 223, 215);
+}
+
+
+@media (max-width:1025px){
+
 }
 
 /* ******************************* edit.css *******************************/
@@ -203,8 +214,8 @@ td {
   text-decoration: none;
   display: flex;
   color: black;
-  border: 10px solid yellow;
-  width: 70vw;
+  /* outline: 10px solid #008678; */
+  width: 952px;
   min-width: max-content;
   justify-content: space-between;
   align-items: center;
@@ -226,32 +237,33 @@ td {
   left: 30%;
 }
 
-@media (max-width: 480px) {
-  .emp-div-nav {
-    width: 370px;
+
+/* *********** search by ******************* */
+.dropdown-outer{
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #008678;
+  color: white;
+  /* border: 2px solid red; */
+}
+.dropdown-outer label{
+  margin-right: 30px;
+}
+
+.dropdown{
+  color: #008678;
+  height: 5vh;
+}
+.select-reset-btn{
+  margin-left: 20px;
+}
+
+
+@media (max-width:1025px){
+  .table-inner-container1{
+    margin: 5rem 7rem;
   }
-  .app-logout-btn-pos {
-    left: 10%;
-  }
-  .table-outer-container {
-    width: 370px;
-  }
-  .table-inner-container2 {
-    width: 370px;
-  }
-  .table-heading {
-    width: 370px;
-  }
-  .table-heading h1 {
-    width: 370px;
-  }
-  .AppNav-outer {
-    width: 100px;
-  }
-  .table-content tbody {
-    width: 370px;
-  }
-  .thead-dark {
-    width: 270px;
+  .td{
+    overflow-wrap: none;
   }
 }

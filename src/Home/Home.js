@@ -81,12 +81,7 @@ export default function Home() {
         <div className='why-us-text'>
           <h2>Our Mission</h2>
           <br/>
-          <p>Have to write something here. 
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-          when an unknown printer took a galley of type and scrambled it to
-           make a type specimen book. It has sur
-           vived not only five centuries, but also the leap i
+          <p>We exist to make your smile brighter and shinier. Our mission is to provide most affordable dental care to those most in need.
            
           </p>
         </div>
