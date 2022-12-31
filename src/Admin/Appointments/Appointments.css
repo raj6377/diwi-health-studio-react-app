@@ -32,7 +32,7 @@
   width: max-content;
   height: max-content;
   margin: 10rem 0;
-  /* box-shadow: 0 2px 10px 0 rgb(0, 0, 0); */
+  box-shadow: 0 2px 10px 0 rgb(0, 0, 0);
   border-bottom: 4px solid #008678;
   /* border: 2px solid green; */
 }
@@ -111,13 +111,13 @@ td {
 /* ******************************* edit.css *******************************/
 
 .form-group {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   padding: 25px;
 }
 
 .edit-container {
   padding: 25px;
-  border: 2px solid rgb(4, 161, 83);
+  /* border: 2px solid rgb(4, 161, 83); */
   border-radius: 6px;
 }
 
@@ -203,7 +203,7 @@ td {
   text-decoration: none;
   display: flex;
   color: black;
-  border: 10px solid yellow;
+  /* border: 10px solid yellow; */
   width: 70vw;
   min-width: max-content;
   justify-content: space-between;
