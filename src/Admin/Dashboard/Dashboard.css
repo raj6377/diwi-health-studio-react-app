@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid yellow; */
+  border: 2px solid yellow;
 }
 
 .all-blogs {
@@ -45,8 +45,7 @@
   width: max-content;
 }
 
-@media(max-width:1025px){
-  
+@media (max-width: 1025px) {
   .all-appointments {
     flex-direction: column;
   }
@@ -65,7 +64,7 @@
     gap: 1rem;
     min-width: 250px;
   }
-  
+
   .dash-logout-pos {
     left: 70%;
   }
