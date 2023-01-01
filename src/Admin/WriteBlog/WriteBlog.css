@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
-* {
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-
-html {
-  overflow-x: hidden;
-}
 
 .write-blog-outer-div {
   margin: 10px;
