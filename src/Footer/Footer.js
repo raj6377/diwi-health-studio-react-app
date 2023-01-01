@@ -50,7 +50,6 @@ export default function Footer() {
 
           <div className='footer-services'>
             <h2>Services</h2>
-            <br/>
             <div>
               <ul>
                 <li>
@@ -71,9 +70,8 @@ export default function Footer() {
 
           <div className='contact-us'>
             <h2>Contact Us</h2>
-            <br/>
             <div>
-              <h5>+916377483870</h5>
+              <h5>+918239381628</h5>
               <br/>
               <h5>diwi.healthstudio@gmail.com</h5>
               <br/>
